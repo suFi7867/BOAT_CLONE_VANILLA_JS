@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins'
 }
 
 #nav {
@@ -30,7 +31,7 @@
   width: 70%;
   height: 60px;
 }
-.left-nav a{
+.left-nav a {
   text-decoration: none;
   color: #090a0a;
 }
@@ -73,7 +74,6 @@
   width: auto;
 }
 
-
 #mid img {
   padding-top: 10px;
 }
@@ -103,26 +103,23 @@
 }
 
 .shop-categories {
-  padding-top: 10px;
-  /* border: 2px solid green; */
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  text-align: center;
-  justify-content: space-between;
-}
-
-.RCB {
   /* border: 2px solid red; */
-  margin-top: 10px;
-  padding: 5px;
-  font-family: Arial, sans-serif;
-}
-
-.RCB h3 {
+  margin: 0px auto;
+  width: max-content;
+  overflow-x: auto;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  gap: 28px;
+}
+/* .shop-categories div img{
+  height: 82px;
+  width: 82px;
+} */
+#shop-categories .categories-banner img,
+#rcb-banner .banner-container img {
+  margin: 0px auto;
+  width: max-content;
+  overflow-x: auto;
+  display: flex;
 }
 
 .RCB h3 span.start {
@@ -132,7 +129,7 @@
 
 .RCB h3 span.separator {
   margin: 0 5px;
-  /* Adjust spacing between "boAt x" and "IPL" */
+ 
   color: #090d0f;
   font-size: 25px;
   font-style: bold;
@@ -140,10 +137,11 @@
 
 .RCB h3 span.button-container {
   margin-left: auto;
-  /* Pushes the button to the end of the line */
 }
 
 .RCB h3 span.button-container p {
+  float: right;
+  margin-right: 145px;
   padding-top: 8px;
   color: #2f5b96;
   font-size: 15px;
@@ -651,12 +649,12 @@
   font-size: 13px;
   color: #a7afb7;
 }
-.address{
+.address {
   margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center; 
+  text-align: center;
   font-size: 13px;
   color: #a7afb7;
 }

@@ -1,26 +1,74 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  font-family: "Poppins";
+}
+#main {
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#container {
+  max-width: 580px;
+  width: 100%;
+  position: relative;
+  overflow: auto;
+  max-height: 95vh;
+  z-index: 9;
+  padding: 18px 18px 17px;
+  border-radius: 10px;
+  border: solid 1px #ecf0f4;
+  background-color: #fafafa;
+}
+.otp-login-head {
+  margin-bottom: 6px;
+  text-align: center;
 }
 
-#container {
-  padding: 10px;
-  padding-top: 15px;
-  border: 2px solid red;
-  height: 500px;
-  width: 40%;
+.otp-number {
+  margin: 25px 0 0;
+  padding: 25px 83px 10px 84px;
+  border-radius: 10px;
+  background-color: #eff4f7;
+}
+.information input {
+  height: 54px;
+  width: 374px;
+  border-radius: 10px;
+  border: solid 1px #e4eaea;
+  background-color: #fcfdff;
+  padding: 0px 18px 0px;
+}
+.send-otp {
+  margin-top: 30px;
+  display: flex;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  text-align: center;
   justify-content: center;
   align-items: center;
 }
-#container input {
-  width: 60%;
-  height: 40px;
+.send-otp button {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 50px;
   text-align: center;
-  justify-content: center;
-  align-items: center;
+  letter-spacing: 0.06em;
+  border-radius: 10px !important;
+  height: 50px;
+  width: 195px;
+  background: #d0d9de;
+  padding: 0 52px;
+  padding-left: 35px;
+  padding-right: 35px;
+  border-radius: 1px;
+}
+.otp-condition {
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  color: #878787;
+  margin: 20px 5px;
+  letter-spacing: 0.15px;
 }

@@ -1,0 +1,345 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins'
+}
+
+#nav {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  position: fixed; /* Fixed positioning */
+  top: 0; /* Position at the top of the viewport */
+  left: 0; /* Align to the left edge */
+  width: 100%; /* Take up the full width of the viewport */
+  background-color: white; /* Optional: Add a background color */
+  z-index: 1000; /* Ensure it's above other content */
+  height: 60px; /* Set the height of the navbar */
+}
+
+.left-nav {
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 20px;
+  width: 70%;
+  height: 60px;
+}
+
+.left-nav a {
+  text-decoration: none;
+  color: #090a0a;
+}
+
+.left-nav img {
+  height: 50px;
+}
+
+.right-nav {
+  /* border: 2px solid green; */
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: flex-start;
+  gap: 20px;
+  width: 30%;
+  height: 60px;
+}
+
+.right-nav input {
+  text-align: center;
+  width: 40%;
+  height: auto;
+  margin-left: 45px;
+  height: 30px;
+  border-radius: 2em;
+}
+
+.right-nav img {
+  height: 30px;
+  width: auto;
+}
+
+.right-nav i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  font-size: x-large;
+  width: auto;
+}
+
+/* Add padding-top to the body or content to avoid being hidden by the fixed navbar */
+.content {
+  padding-top: 80px; /* Adjust based on the navbar height */
+}
+
+.content h1 {
+  padding-top: 24px;
+  font-size: 24px;
+  color: #112024;
+}
+
+#filter-sort {
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 40px;
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: space-between;
+}
+#filter-sort button {
+  padding: 10px;
+  font-size: 18px;
+  height: 50px;
+  border: solid 1px #e2ebef;
+  background-color: #eff4f7;
+}
+#filter-sort .sort input {
+  width: 100px;
+  text-align: center;
+}
+#container {
+  margin-top: 30px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  gap: 5px;
+  padding: 4px;
+}
+
+#container .pictures{
+  background: whitesmoke;
+}
+#container .pictures img {
+  padding: 3px;
+  height: 159px;
+  width: 159px;
+  border-radius: 8px 8px 0 0;
+}
+.pictures p {
+  justify-content: center;
+  text-align: center;
+  margin-left: 3px;
+  padding: 5px;
+  font-size: 12px;
+  font-weight: 700;
+  background: #fcc50b;
+  color: #000;
+  width: 154px;
+  border-radius: 0 0 8px 8px;
+}
+.info {
+  padding: 3px;
+  background: whitesmoke;
+  /* background-color: #eff4f7; */
+}
+.info h3 {
+  text-decoration: none;
+  font-size: 18px;
+  font-style: bold;
+  color: #1a2024;
+}
+.original-price {
+  font-size: 18px;
+  font-weight: 550;
+  text-align: center;
+}
+.discounted-price {
+  text-decoration: line-through;
+  text-align: center;
+  font-size: 15px;
+}
+.offer {
+  font-size: 12px;
+  font-weight: bold;
+  color: #12b985;
+}
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  margin-top: 5px;
+}
+.features span {
+  font-size: 15px;
+  border-radius: 12px;
+
+  padding: 5px 8px 4px;
+  background-color: #eff4f7;
+  line-height: 1.1;
+  letter-spacing: -0.4px;
+  color: #1a2024;
+  border: 0;
+}
+.btn {
+  /* border: 2px solid red; */
+  margin-top: 8px;
+  height: 40px;
+  width: 193px;
+  background: #1a2024;
+  border: 1px solid #1a2024;
+  padding: 12px;
+  border-radius: 10px ;
+  color: #fff;
+  font-size: 14px ;
+  font-weight: 500 ;
+}
+
+#footer {
+  background: #e7f0f5;
+  margin-top: 40px;
+}
+#footer {
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+#footer img {
+  /* border: 2px solid red; */
+  padding-left: 50px;
+  padding-top: 30px;
+}
+#footer h2 {
+  /* border: 2px solid red; */
+  padding-left: 50px;
+  padding-top: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  opacity: 1;
+  margin-bottom: 5px;
+}
+
+.banner-boat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.input-section img {
+  max-width: 100%;
+  height: auto;
+}
+
+.input-section h2 {
+  margin: 10px 0;
+}
+
+.input-section input {
+  height: 50px;
+  width: 250px;
+  margin-left: 48px;
+  margin-top: 10px;
+  padding: 8px;
+  padding-left: 5px;
+  border: solid 1px #e1e6eb;
+  border-radius: 4px;
+  background-color: white;
+  text-align: center;
+}
+.itemlist {
+  display: flex;
+  gap: 110px; /* Adjusts the spacing between the item lists */
+  margin-right: auto; /* Push the itemlist to the left */
+  margin-left: auto;
+}
+.itemlist .itemlist-1 {
+  padding: 0px 40px;
+}
+
+.itemlist .itemlist-2 {
+  padding: 0px 40px;
+}
+
+.itemlist .itemlist-3 {
+  padding: 0px 40px;
+}
+.itemlist > div {
+  flex: 1;
+}
+
+.itemlist h4 {
+  margin-bottom: 10px;
+}
+
+.itemlist ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.itemlist li {
+  margin-bottom: 5px;
+}
+#social-media {
+  margin-top: 40px;
+}
+.icons {
+  /* border: 2px solid red; */
+  background: #e7f0f5;
+  height: 231px;
+  margin: auto;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+}
+
+.icons .logos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+}
+.logos span {
+  font-size: 16px;
+  font-weight: normal;
+  color: #090a0a;
+  text-align: center;
+}
+.logos a {
+  padding-top: 18px;
+  text-decoration: none;
+  background-color: transparent;
+  color: black;
+  cursor: pointer;
+  height: 55px;
+  width: auto;
+}
+.Policy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 15px;
+  font-size: 14px;
+}
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 13px;
+  color: #a7afb7;
+}
+.address {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 13px;
+  color: #a7afb7;
+}
