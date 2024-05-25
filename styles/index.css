@@ -2,7 +2,49 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins'
+  font-family: "Poppins";
+}
+
+.container {
+  width: 100%;
+  border: 1px solid;
+}
+
+.component {
+  padding: 0px 40px;
+  max-width: 1600px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.main-container {
+  border: 1px solid;
+  width: 100%;
+  /* max-width: 1600px; */
+
+  margin: auto;
+
+  /* @media (max-width: 480px)  {
+    
+  }
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+    body {
+        font-size: 15px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+   
+  } */
+  /* @media (min-width: 1025px) and (max-width:  */
+}
+
+section {
+  border: 1px solid !important;
+}
+
+#header {
+
 }
 
 #nav {
@@ -10,12 +52,12 @@
   align-items: center;
   text-align: center;
   justify-content: space-between;
+
+  max-width: 1600px;
+  margin: auto;
 }
 
 #nav {
-  position: fixed; /* Fixed positioning */
-  top: 0; /* Position at the top of the viewport */
-  left: 0; /* Align to the left edge */
   width: 100%; /* Take up the full width of the viewport */
   background-color: white; /* Optional: Add a background color */
   z-index: 1000; /* Ensure it's above other content */
@@ -105,7 +147,7 @@
 .shop-categories {
   /* border: 2px solid red; */
   margin: 0px auto;
-  width: max-content;
+
   overflow-x: auto;
   display: flex;
   gap: 28px;
@@ -117,9 +159,15 @@
 #shop-categories .categories-banner img,
 #rcb-banner .banner-container img {
   margin: 0px auto;
-  width: max-content;
+
   overflow-x: auto;
   display: flex;
+}
+
+
+
+#rcb-banner > img {
+  width: 100%;
 }
 
 .RCB h3 span.start {
@@ -129,7 +177,7 @@
 
 .RCB h3 span.separator {
   margin: 0 5px;
- 
+
   color: #090d0f;
   font-size: 25px;
   font-style: bold;
@@ -141,7 +189,6 @@
 
 .RCB h3 span.button-container p {
   float: right;
-  margin-right: 145px;
   padding-top: 8px;
   color: #2f5b96;
   font-size: 15px;
@@ -231,36 +278,41 @@
   font-size: 14px;
 }
 
-#products2 {
+#products {
   margin-top: 15px;
-  display: flex;
-  justify-content: center;
+ 
+  display: grid;
   gap: 25px;
-  align-items: center;
+  grid-template-columns: repeat(4,1fr);
+
 }
 
-#products2 img {
+#products img {
   /* display: flex; */
   /* gap: 20px; */
   height: 322px;
   width: 322px;
   border-radius: 2%;
 }
-
-#products2 div h5 {
+#products div{
+  position: relative;
+}
+#products div h5 {
+  position: absolute;
+  bottom: 95px;
   padding-top: 3px;
   font-size: 15px;
-  margin-left: 43px;
+ 
   justify-content: center;
   text-align: center;
   background-color: #fcc50b;
   color: black;
-  height: 23px;
-  width: 240px;
+ padding: 5px 10px;
+  left: 80px;
   border-radius: 5%;
 }
 
-#products2 div h3 {
+#products div h3 {
   font-size: 18px;
   font-style: bold;
 }
@@ -348,7 +400,7 @@
   font-size: 25px;
 }
 
-.Brands {
+.brands {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -356,10 +408,13 @@
   gap: 23px;
 }
 
-.Brands div img {
+.brands > div {
+  flex: 1;
+}
+
+.brands div img {
   display: flex;
-  height: 543px;
-  width: 365px;
+  width: 100%;
 }
 
 #text {
@@ -446,12 +501,9 @@
 } */
 
 #container {
-  padding-left: 180px;
   display: flex;
   flex-direction: row;
   /* border: 2px solid red; */
-  height: 280px;
-  width: 1472px;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -461,42 +513,30 @@
   justify-content: center;
   align-items: center;
 }
-#container .first-box {
-  /* border: 2px solid blue; */
-  height: 280px;
-  width: 588px;
-  color: #666666;
-  background: #d0d9de;
-  padding: 20px;
-}
-#container .second-box {
-  /* border: 2px solid aqua; */
-  width: 883.19px;
-  height: 185px;
-  color: #666666;
-  font-size: 20px;
-  padding: 10px 15px;
-}
-#container .second-box .quotes {
-  /* border: 2px solid green; */
-  font-size: 20px;
-  height: 57px;
-  width: 853.19px;
-  color: #666666;
-}
-#container .second-box .para {
-  font-size: 24px;
-  margin: 0px 101px;
+
+.press-container {
   display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  height: 108px;
-  width: 650px;
-  /* border: 2px solid yellow; */
-  color: #666666;
-  background: #f7f9fa rgb(247, 249, 250);
 }
+.press-container > div:nth-child(1) {
+
+  flex: 1;
+}
+.press-container > div:nth-child(2) {
+
+  flex: 1.5;
+  background-color: #f7f9fa;
+  
+}
+
+.press-container > div:nth-child(1) {
+  background-color: #d0d9de;
+  display: grid;
+}
+
+.press-container > div:nth-child(1) > img {
+  margin: auto;
+}
+
 .symbol {
   display: flex;
   flex-direction: row;
@@ -658,3 +698,20 @@
   font-size: 13px;
   color: #a7afb7;
 }
+
+/* Default styles (Mobile-first approach) */
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+}
+
+/* Larger Mobile Devices */
+@media (min-width: 481px) and (max-width: 767px) {
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+/* Laptops */
+/* @media (min-width: 1025px) and (max-width:  */
