@@ -2,34 +2,42 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins'
+  font-family: "Poppins";
 }
-.component{
+
+.component {
   padding: 0px 40px;
+  max-width: 1520px;
+  margin: auto;
+  margin-bottom: 20px;
 }
+
+.main-container {
+  max-width: 1520px;
+  margin: auto;
+}
+
 #nav {
   display: flex;
   align-items: center;
   text-align: center;
   justify-content: space-between;
-  position: fixed; /* Fixed positioning */
-  top: 0; /* Position at the top of the viewport */
-  left: 0; /* Align to the left edge */
-  width: 100%; /* Take up the full width of the viewport */
-  background-color: white; /* Optional: Add a background color */
-  z-index: 1000; /* Ensure it's above other content */
-  height: 60px; /* Set the height of the navbar */
+  max-width: 1520px;
+  margin: auto;
+}
+
+#nav {
+  padding: 21px 0px;
+  background-color: white;
+  z-index: 1000;
 }
 
 .left-nav {
-  /* border: 2px solid red; */
   display: flex;
   align-items: center;
   text-align: center;
   justify-content: center;
   gap: 20px;
-  width: 70%;
-  height: 60px;
 }
 
 .left-nav a {
@@ -37,27 +45,18 @@
   color: #090a0a;
 }
 
-.left-nav img {
-  height: 50px;
-}
-
 .right-nav {
-  /* border: 2px solid green; */
   display: flex;
   align-items: center;
   text-align: center;
   justify-content: flex-start;
   gap: 20px;
-  width: 30%;
-  height: 60px;
 }
 
 .right-nav input {
   text-align: center;
-  width: 40%;
   height: auto;
   margin-left: 45px;
-  height: 30px;
   border-radius: 2em;
 }
 
@@ -75,46 +74,66 @@
   width: auto;
 }
 
-/* Add padding-top to the body or content to avoid being hidden by the fixed navbar */
-.content {
-  padding-top: 80px; /* Adjust based on the navbar height */
+#mid {
+  padding-top: 21px;
+  margin-bottom: 8px;
 }
 
-.content h1 {
+.home {
+  font-size: 10px;
+}
+
+.home ol {
+  text-decoration: none;
+  list-style: none;
+}
+
+#text {
   padding-top: 24px;
-  font-size: 24px;
-  color: #112024;
 }
 
 #filter-sort {
-  padding-left: 30px;
-  padding-right: 30px;
-  margin-top: 40px;
-  /* border: 2px solid red; */
   display: flex;
   justify-content: space-between;
+  margin-top: 30px;
 }
-#filter-sort button {
-  padding: 10px;
-  font-size: 18px;
-  height: 50px;
+
+.filter button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 10px 8px;
+  border-radius: 8px;
   border: solid 1px #e2ebef;
   background-color: #eff4f7;
+  border-radius: 5px !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
 }
-#filter-sort .sort input {
-  width: 100px;
-  text-align: center;
+
+.sort button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 10px 8px;
+  border-radius: 8px;
+  border: solid 1px #e2ebef;
+  background-color: #eff4f7;
+  border-radius: 5px !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
 }
+
 #container {
   margin-top: 30px;
   align-items: center;
   justify-content: center;
   display: flex;
   gap: 5px;
-  padding: 4px;
+  /* padding: 4px; */
 }
 
-#container .pictures{
+#container .pictures {
   background: whitesmoke;
 }
 #container .pictures img {
@@ -170,7 +189,6 @@
 .features span {
   font-size: 15px;
   border-radius: 12px;
-
   padding: 5px 8px 4px;
   background-color: #eff4f7;
   line-height: 1.1;
@@ -186,10 +204,10 @@
   background: #1a2024;
   border: 1px solid #1a2024;
   padding: 12px;
-  border-radius: 10px ;
+  border-radius: 10px;
   color: #fff;
-  font-size: 14px ;
-  font-weight: 500 ;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 #footer {
@@ -289,7 +307,7 @@
 .icons {
   /* border: 2px solid red; */
   background: #e7f0f5;
-  height: 231px;
+  height: 239px;
   margin: auto;
   /* display: flex; */
   justify-content: center;
