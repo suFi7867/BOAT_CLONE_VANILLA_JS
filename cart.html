@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="/styles/common.css">
+    <link rel="stylesheet" href="/styles/cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+</head>
+
+<body>
+    <section id="header" class="component">
+        <div id="nav" class="component">
+            <div class="left-nav">
+                <img src="/images/logo.svg" alt="boat-logo" />
+                <a href="#">Categories</a>
+                <a href="#">boAt Personalisation</a>
+                <a href="#">Gift with Boat</a>
+                <a href="#">Corporate Orders</a>
+                <a href="#">More</a>
+            </div>
+
+            <div class="right-nav">
+                <input type="text" id="search" placeholder="Search Earphones" />
+                <img src="/images/Profile-1.webp" alt="" />
+                <div style="display: flex;"> <i class="fas fa-shopping-bag"></i> <span class="product-count"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="links">
+        <div class="redirecting">
+            <h1>Cart</h1>
+        </div>
+    </section>
+
+    <section id="cart-products">
+        <div class="cart">
+
+
+        </div>
+
+        <div class="payment">
+
+            <div class="coupon">
+                <h4>CART DETAILS</h4>
+                <div class="input-apply">
+                    <input type="text" placeholder="Have a Coupon ?">
+                    <span><button>Apply</button></span>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="price-info">
+                <h4>PRICE DETAILS</h4>
+                <div class="price-details">
+                    <div>
+                        <span>Cart Items :</span> <span id="total-items"></span>
+                    </div>
+                    <div>
+                        <span>Total MRP :</span> <span id="total-price"></span>
+                    </div>
+                    <div>
+                        <span>Discount :</span> <span id="discount-price"></span>
+                    </div>
+         
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="total-amount">
+                <h4>Total Amount</h4>
+                <button>Place Order</button>
+            </div>
+        </div>
+
+    </section>
+</body>
+
+</html>
+<script src="/scripts/cart.js"></script>

@@ -1,0 +1,119 @@
+#links .redirecting {
+    margin: auto;
+    width: fit-content;
+    text-align: center;
+}
+
+#cart-products {
+    /* border: 2px solid green; */
+    display: flex;
+    gap: 20px;
+    padding: 0 50px;
+    margin: 50px auto;
+    max-width: 1600px;
+}
+
+#cart-products>.cart {
+    /* border: 2px solid blue; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 3;
+    max-height: 350px;
+
+}
+
+#cart-products>.cart>.card {
+    /* border: 2px solid; */
+    background: whitesmoke;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: fit-content;
+    border-radius: 15px;
+}
+
+#cart-products>.cart>.card img {
+    width: 100px;
+    border-radius: 5px;
+}
+
+#cart-products>.cart>.card h3 {
+    width: 150px;
+}
+
+#cart-products>.cart>.card button {
+    margin-right: 8px;
+    width: fit-content;
+    background: #1a2024;
+    border: 1px solid #1a2024;
+    padding: 10px;
+    border-radius: 3px !important;
+    color: #fff;
+    font-size: 16px !important;
+    font-weight: 500px !important;
+}
+
+#cart-products>.payment {
+    /* border: 2px solid aqua; */
+    border-radius: 15px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: whitesmoke;
+    flex: 1;
+}
+
+#cart-products>.payment .coupon h4 {
+    text-align: center;
+}
+
+#cart-products>.payment .coupon .input-apply {
+    margin: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#cart-products>.payment .coupon .input-apply input {
+    text-align: center;
+}
+
+#cart-products>.payment .coupon .input-apply span button {
+    margin-right: 8px;
+    width: fit-content;
+    background: #1a2024;
+    border: 1px solid #1a2024;
+    padding: 10px;
+    border-radius: 3px !important;
+    color: #fff;
+    font-size: 14px !important;
+    font-weight: 500px !important;
+}
+
+#cart-products>.payment .price-info h4 {
+    margin-bottom: 5px;
+}
+
+#cart-products>.payment .price-info .price-details {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+#cart-products>.payment .total-amount {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#cart-products>.payment .total-amount button {
+    width: fit-content;
+    background: #1a2024;
+    border: 1px solid #1a2024;
+    padding: 10px;
+    border-radius: 3px !important;
+    color: #fff;
+    font-size: 14px !important;
+    font-weight: 500px !important
+}
