@@ -2,12 +2,13 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Boat-Personalization</title>
-  <link rel="stylesheet" href="/styles/products.css">
+  <link rel="stylesheet" href="/styles/products.css" />
+  <link rel="stylesheet" href="/styles/common.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
 </head>
 
 <body>
@@ -26,7 +27,7 @@
         <div class="right-nav">
           <input type="text" id="search" placeholder="Search Earphones" />
           <img src="/images/Profile-1.webp" alt="" />
-          <i class="fas fa-shopping-bag"></i>
+          <div style="display: flex;"> <i class="fas fa-shopping-bag"></i> <span class="product-count"></span></div>
         </div>
       </div>
     </section>
@@ -63,7 +64,20 @@
             <path fill="none" d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="2"></path>
           </svg>
         </button>
+
+        <select name="" id="filter-category">
+          <option value="Default">Default</option>
+          <option value="Earphones">Earphones</option>
+          <option value="Power Bank">Power Bank</option>
+        </select>
+
       </div>
+
+
+      <div class="search">
+        <input type="text" placeholder="search" />
+      </div>
+
       <div class="sort">
         <button>
           <img alt="sort-by" width="12" height="12" class="icon mr-1 hidden-pocket"
@@ -74,455 +88,428 @@
             <path fill="none" d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="2"></path>
           </svg>
         </button>
+
+        <select name="" id="sort-products">
+          <option value="Default">Default</option>
+          <option value="htl">High to Low-Price</option>
+          <option value="lth">Low to High-Price</option>
+          <option value="asc">Ascending A-Z</option>
+          <option value="desc">Descending Z-A</option>
+        </select>
+
       </div>
     </section>
 
     <section id="products" class="component">
-
-      <div id="container">
-
-        <div class="pictures">
-          <img src="/images/g1.webp" alt="">
-          <br>
-          <div>
-            <p>60 Hours Playback</p>
+      <!-- <div>
+        <div id="container">
+          <div class="pictures">
+            <img src="/images/g1.webp" alt="" />
+            <br />
+            <div>
+              <p>60 Hours Playback</p>
+            </div>
           </div>
 
+          <div class="info">
+            <span>
+              &#11088;5.0 |77
+              <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Mask_group-10.png?v=1677571152"
+                style="width: 11px; height: 11px" alt="verified reviews" />
+            </span>
+            <br />
+            <h3>Nirvana lon</h3>
+            <div>
+              <span class="original-price">₹1,999</span>
+              <span class="discounted-price">₹7,999</span>
+              <span class="offer">75% off</span>
+            </div>
+
+            <div class="features">
+              <span>ENX Technology</span>
+              <span>BEAST Mode</span>
+              <span>Dual EQ Modes</span>
+            </div>
+
+            <div>
+              <button class="btn">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="pictures">
+            <img src="/images/g2.webp" alt="" />
+            <br />
+            <div>
+              <p>60 Hours Playback</p>
+            </div>
+          </div>
+
+          <div class="info">
+            <span>
+              &#11088;4.8 |1359
+              <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Mask_group-10.png?v=1677571152"
+                style="width: 11px; height: 11px" alt="verified reviews" />
+            </span>
+            <br />
+            <h3>Airdopes 131</h3>
+            <div>
+              <span class="original-price">₹899</span>
+              <span class="discounted-price">₹2,999</span>
+              <span class="offer">70% off</span>
+            </div>
+
+            <div class="features">
+              <span>ENX Technology</span>
+              <span>BEAST Mode</span>
+              <span>Dual EQ Modes</span>
+            </div>
+
+            <div>
+              <button class="btn">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="pictures">
+            <img src="/images/g3.webp" alt="" />
+            <br />
+            <div>
+              <p>45 Hours Playback</p>
+            </div>
+          </div>
+
+          <div class="info">
+            <span>
+              &#11088;4.9 |191
+              <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Mask_group-10.png?v=1677571152"
+                style="width: 11px; height: 11px" alt="verified reviews" />
+            </span>
+            <br />
+            <h3>Airdopes 131 Pro</h3>
+            <div>
+              <span class="original-price">₹1,099</span>
+              <span class="discounted-price">₹2,999</span>
+              <span class="offer">63% off</span>
+            </div>
+
+            <div class="features">
+              <span>ENX Technology</span>
+              <span>BEAST Mode</span>
+              <span>Dual EQ Modes</span>
+            </div>
+
+            <div>
+              <button class="btn">Add to Cart</button>
+            </div>
+          </div>
         </div>
 
-        <div class="info">
-          <span>
-            &#11088;5.0 |77
-            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Mask_group-10.png?v=1677571152"
-              style="width:11px;height:11px;" alt="verified reviews">
-          </span>
-          <br>
-          <h3>Nirvana lon</h3>
-          <div>
-            <span class="original-price">₹1,999</span>
-            <span class="discounted-price">₹7,999</span>
-            <span class="offer">75% off</span>
+        <div id="container">
+          <div class="pictures">
+            <img src="/images/g4.webp" alt="" />
+            <br />
+            <div>
+              <p>40 Hours Playback</p>
+            </div>
           </div>
 
-          <div class="features">
-            <span>ENX Technology</span>
-            <span>BEAST Mode</span>
-            <span>Dual EQ Modes</span>
+          <div class="info">
+            <span>
+              &#11088;4.9 |172
+              <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Mask_group-10.png?v=1677571152"
+                style="width: 11px; height: 11px" alt="verified reviews" />
+            </span>
+            <br />
+            <h3>Airdopes 161</h3>
+            <div>
+              <span class="original-price">₹1,099</span>
+              <span class="discounted-price">₹2,499</span>
+              <span class="offer">56% off</span>
+            </div>
+
+            <div class="features">
+              <span>ENX Technology</span>
+              <span>BEAST Mode</span>
+              <span>Dual EQ Modes</span>
+            </div>
+
+            <div>
+              <button class="btn">Add to Cart</button>
+            </div>
           </div>
 
-          <div>
-            <button class="btn">Add to Cart</button>
+          <div class="pictures">
+            <img src="/images/g5.webp" alt="" />
+            <br />
+            <div>
+              <p>42 Hours Playback</p>
+            </div>
           </div>
 
+          <div class="info">
+            <span>
+              &#11088;5.0 |35
+              <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Mask_group-10.png?v=1677571152"
+                style="width: 11px; height: 11px" alt="verified reviews" />
+            </span>
+            <br />
+            <h3>Airdopes 170</h3>
+            <div>
+              <span class="original-price">₹1,599</span>
+              <span class="discounted-price">₹3,499</span>
+              <span class="offer">54% off</span>
+            </div>
+
+            <div class="features">
+              <span>ENX Technology</span>
+              <span>BEAST Mode</span>
+              <span>13mm Drivers</span>
+            </div>
+
+            <div>
+              <button class="btn">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="pictures">
+            <img src="/images/g6.webp" alt="" />
+            <br />
+            <div>
+              <p>40 Hours Playback</p>
+            </div>
+          </div>
+
+          <div class="info">
+            <span>
+              &#11088;4.6 |34
+              <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Mask_group-10.png?v=1677571152"
+                style="width: 11px; height: 11px" alt="verified reviews" />
+            </span>
+            <br />
+            <h3>Airdopes 170 Pro</h3>
+            <div>
+              <span class="original-price">₹1,099</span>
+              <span class="discounted-price">₹2,999</span>
+              <span class="offer">63% off</span>
+            </div>
+
+            <div class="features">
+              <span>ENX Technology</span>
+              <span>BEAST Mode</span>
+              <span>13mm Drivers</span>
+            </div>
+
+            <div>
+              <button class="btn">Add to Cart</button>
+            </div>
+          </div>
         </div>
 
-
-        <div class="pictures">
-          <img src="/images/g2.webp" alt="">
-          <br>
-          <div>
-            <p>60 Hours Playback</p>
+        <div id="container">
+          <div class="pictures">
+            <img src="/images/g1.webp" alt="" />
+            <br />
+            <div>
+              <p>40 Hours Playback</p>
+            </div>
           </div>
 
+          <div class="info">
+            <span>
+              &#11088;4.9 |172
+              <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Mask_group-10.png?v=1677571152"
+                style="width: 11px; height: 11px" alt="verified reviews" />
+            </span>
+            <br />
+            <h3>Airdopes 161</h3>
+            <div>
+              <span class="original-price">₹1,099</span>
+              <span class="discounted-price">₹2,499</span>
+              <span class="offer">56% off</span>
+            </div>
+
+            <div class="features">
+              <span>ENX Technology</span>
+              <span>BEAST Mode</span>
+              <span>Dual EQ Modes</span>
+            </div>
+
+            <div>
+              <button class="btn">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="pictures">
+            <img src="/images/g7.webp" alt="" />
+            <br />
+            <div>
+              <p>42 Hours Playback</p>
+            </div>
+          </div>
+
+          <div class="info">
+            <span>
+              &#11088;5.0 |35
+              <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Mask_group-10.png?v=1677571152"
+                style="width: 11px; height: 11px" alt="verified reviews" />
+            </span>
+            <br />
+            <h3>Airdopes 170</h3>
+            <div>
+              <span class="original-price">₹1,599</span>
+              <span class="discounted-price">₹3,499</span>
+              <span class="offer">54% off</span>
+            </div>
+
+            <div class="features">
+              <span>ENX Technology</span>
+              <span>BEAST Mode</span>
+              <span>13mm Drivers</span>
+            </div>
+
+            <div>
+              <button class="btn">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="pictures">
+            <img src="/images/g2.webp" alt="" />
+            <br />
+            <div>
+              <p>40 Hours Playback</p>
+            </div>
+          </div>
+
+          <div class="info">
+            <span>
+              &#11088;4.6 |34
+              <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Mask_group-10.png?v=1677571152"
+                style="width: 11px; height: 11px" alt="verified reviews" />
+            </span>
+            <br />
+            <h3>Airdopes 170 Pro</h3>
+            <div>
+              <span class="original-price">₹1,099</span>
+              <span class="discounted-price">₹2,999</span>
+              <span class="offer">63% off</span>
+            </div>
+
+            <div class="features">
+              <span>ENX Technology</span>
+              <span>BEAST Mode</span>
+              <span>13mm Drivers</span>
+            </div>
+
+            <div>
+              <button class="btn">Add to Cart</button>
+            </div>
+          </div>
         </div>
 
-        <div class="info">
-          <span>
-            &#11088;4.8 |1359
-            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Mask_group-10.png?v=1677571152"
-              style="width:11px;height:11px;" alt="verified reviews">
-          </span>
-          <br>
-          <h3>Airdopes 131</h3>
-          <div>
-            <span class="original-price">₹899</span>
-            <span class="discounted-price">₹2,999</span>
-            <span class="offer">70% off</span>
+        <div id="container">
+          <div class="pictures">
+            <img src="/images/g10.webp" alt="" />
+            <br />
+            <div>
+              <p>40 Hours Playback</p>
+            </div>
           </div>
 
-          <div class="features">
-            <span>ENX Technology</span>
-            <span>BEAST Mode</span>
-            <span>Dual EQ Modes</span>
+          <div class="info">
+            <span>
+              &#11088;4.9 |172
+              <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Mask_group-10.png?v=1677571152"
+                style="width: 11px; height: 11px" alt="verified reviews" />
+            </span>
+            <br />
+            <h3>Airdopes 161</h3>
+            <div>
+              <span class="original-price">₹1,099</span>
+              <span class="discounted-price">₹2,499</span>
+              <span class="offer">56% off</span>
+            </div>
+
+            <div class="features">
+              <span>ENX Technology</span>
+              <span>BEAST Mode</span>
+              <span>Dual EQ Modes</span>
+            </div>
+
+            <div>
+              <button class="btn">Add to Cart</button>
+            </div>
           </div>
 
-          <div>
-            <button class="btn">Add to Cart</button>
+          <div class="pictures">
+            <img src="/images/g11.webp" alt="" />
+            <br />
+            <div>
+              <p>42 Hours Playback</p>
+            </div>
           </div>
 
+          <div class="info">
+            <span>
+              &#11088;5.0 |35
+              <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Mask_group-10.png?v=1677571152"
+                style="width: 11px; height: 11px" alt="verified reviews" />
+            </span>
+            <br />
+            <h3>Airdopes 170</h3>
+            <div>
+              <span class="original-price">₹1,599</span>
+              <span class="discounted-price">₹3,499</span>
+              <span class="offer">54% off</span>
+            </div>
+
+            <div class="features">
+              <span>ENX Technology</span>
+              <span>BEAST Mode</span>
+              <span>13mm Drivers</span>
+            </div>
+
+            <div>
+              <button class="btn">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="pictures">
+            <img src="/images/g12.webp" alt="" />
+            <br />
+            <div>
+              <p>40 Hours Playback</p>
+            </div>
+          </div>
+
+          <div class="info">
+            <span>
+              &#11088;4.6 |34
+              <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Mask_group-10.png?v=1677571152"
+                style="width: 11px; height: 11px" alt="verified reviews" />
+            </span>
+            <br />
+            <h3>Airdopes 170 Pro</h3>
+            <div>
+              <span class="original-price">₹1,099</span>
+              <span class="discounted-price">₹2,999</span>
+              <span class="offer">63% off</span>
+            </div>
+
+            <div class="features">
+              <span>ENX Technology</span>
+              <span>BEAST Mode</span>
+              <span>13mm Drivers</span>
+            </div>
+
+            <div>
+              <button class="btn">Add to Cart</button>
+            </div>
+          </div>
         </div>
-
-
-        <div class="pictures">
-          <img src="/images/g3.webp" alt="">
-          <br>
-          <div>
-            <p>45 Hours Playback</p>
-          </div>
-
-        </div>
-
-        <div class="info">
-          <span>
-            &#11088;4.9 |191
-            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Mask_group-10.png?v=1677571152"
-              style="width:11px;height:11px;" alt="verified reviews">
-          </span>
-          <br>
-          <h3>Airdopes 131 Pro</h3>
-          <div>
-            <span class="original-price">₹1,099</span>
-            <span class="discounted-price">₹2,999</span>
-            <span class="offer">63% off</span>
-          </div>
-
-          <div class="features">
-            <span>ENX Technology</span>
-            <span>BEAST Mode</span>
-            <span>Dual EQ Modes</span>
-          </div>
-
-          <div>
-            <button class="btn">Add to Cart</button>
-          </div>
-
-        </div>
-      </div>
-
-
-      <div id="container">
-
-        <div class="pictures">
-          <img src="/images/g4.webp" alt="">
-          <br>
-          <div>
-            <p>40 Hours Playback</p>
-          </div>
-
-        </div>
-
-        <div class="info">
-          <span>
-            &#11088;4.9 |172
-            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Mask_group-10.png?v=1677571152"
-              style="width:11px;height:11px;" alt="verified reviews">
-          </span>
-          <br>
-          <h3>Airdopes 161</h3>
-          <div>
-            <span class="original-price">₹1,099</span>
-            <span class="discounted-price">₹2,499</span>
-            <span class="offer">56% off</span>
-          </div>
-
-          <div class="features">
-            <span>ENX Technology</span>
-            <span>BEAST Mode</span>
-            <span>Dual EQ Modes</span>
-          </div>
-
-          <div>
-            <button class="btn">Add to Cart</button>
-          </div>
-
-        </div>
-
-
-        <div class="pictures">
-          <img src="/images/g5.webp" alt="">
-          <br>
-          <div>
-            <p>42 Hours Playback</p>
-          </div>
-
-        </div>
-
-        <div class="info">
-          <span>
-            &#11088;5.0 |35
-            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Mask_group-10.png?v=1677571152"
-              style="width:11px;height:11px;" alt="verified reviews">
-          </span>
-          <br>
-          <h3>Airdopes 170</h3>
-          <div>
-            <span class="original-price">₹1,599</span>
-            <span class="discounted-price">₹3,499</span>
-            <span class="offer">54% off</span>
-          </div>
-
-          <div class="features">
-            <span>ENX Technology</span>
-            <span>BEAST Mode</span>
-            <span>13mm Drivers</span>
-          </div>
-
-          <div>
-            <button class="btn">Add to Cart</button>
-          </div>
-
-        </div>
-
-
-        <div class="pictures">
-          <img src="/images/g6.webp" alt="">
-          <br>
-          <div>
-            <p>>40 Hours Playback</p>
-          </div>
-
-        </div>
-
-        <div class="info">
-          <span>
-            &#11088;4.6 |34
-            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Mask_group-10.png?v=1677571152"
-              style="width:11px;height:11px;" alt="verified reviews">
-          </span>
-          <br>
-          <h3>Airdopes 170 Pro</h3>
-          <div>
-            <span class="original-price">₹1,099</span>
-            <span class="discounted-price">₹2,999</span>
-            <span class="offer">63% off</span>
-          </div>
-
-          <div class="features">
-            <span>ENX Technology</span>
-            <span>BEAST Mode</span>
-            <span>13mm Drivers</span>
-          </div>
-
-          <div>
-            <button class="btn">Add to Cart</button>
-          </div>
-
-        </div>
-      </div>
-
-      <div id="container">
-
-        <div class="pictures">
-          <img src="/images/g1.webp" alt="">
-          <br>
-          <div>
-            <p>40 Hours Playback</p>
-          </div>
-
-        </div>
-
-        <div class="info">
-          <span>
-            &#11088;4.9 |172
-            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Mask_group-10.png?v=1677571152"
-              style="width:11px;height:11px;" alt="verified reviews">
-          </span>
-          <br>
-          <h3>Airdopes 161</h3>
-          <div>
-            <span class="original-price">₹1,099</span>
-            <span class="discounted-price">₹2,499</span>
-            <span class="offer">56% off</span>
-          </div>
-
-          <div class="features">
-            <span>ENX Technology</span>
-            <span>BEAST Mode</span>
-            <span>Dual EQ Modes</span>
-          </div>
-
-          <div>
-            <button class="btn">Add to Cart</button>
-          </div>
-
-        </div>
-
-
-        <div class="pictures">
-          <img src="/images/g7.webp" alt="">
-          <br>
-          <div>
-            <p>42 Hours Playback</p>
-          </div>
-
-        </div>
-
-        <div class="info">
-          <span>
-            &#11088;5.0 |35
-            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Mask_group-10.png?v=1677571152"
-              style="width:11px;height:11px;" alt="verified reviews">
-          </span>
-          <br>
-          <h3>Airdopes 170</h3>
-          <div>
-            <span class="original-price">₹1,599</span>
-            <span class="discounted-price">₹3,499</span>
-            <span class="offer">54% off</span>
-          </div>
-
-          <div class="features">
-            <span>ENX Technology</span>
-            <span>BEAST Mode</span>
-            <span>13mm Drivers</span>
-          </div>
-
-          <div>
-            <button class="btn">Add to Cart</button>
-          </div>
-
-        </div>
-
-
-        <div class="pictures">
-          <img src="/images/g2.webp" alt="">
-          <br>
-          <div>
-            <p>>40 Hours Playback</p>
-          </div>
-
-        </div>
-
-        <div class="info">
-          <span>
-            &#11088;4.6 |34
-            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Mask_group-10.png?v=1677571152"
-              style="width:11px;height:11px;" alt="verified reviews">
-          </span>
-          <br>
-          <h3>Airdopes 170 Pro</h3>
-          <div>
-            <span class="original-price">₹1,099</span>
-            <span class="discounted-price">₹2,999</span>
-            <span class="offer">63% off</span>
-          </div>
-
-          <div class="features">
-            <span>ENX Technology</span>
-            <span>BEAST Mode</span>
-            <span>13mm Drivers</span>
-          </div>
-
-          <div>
-            <button class="btn">Add to Cart</button>
-          </div>
-
-        </div>
-      </div>
-
-      <div id="container">
-
-        <div class="pictures">
-          <img src="/images/g10.webp" alt="">
-          <br>
-          <div>
-            <p>40 Hours Playback</p>
-          </div>
-
-        </div>
-
-        <div class="info">
-          <span>
-            &#11088;4.9 |172
-            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Mask_group-10.png?v=1677571152"
-              style="width:11px;height:11px;" alt="verified reviews">
-          </span>
-          <br>
-          <h3>Airdopes 161</h3>
-          <div>
-            <span class="original-price">₹1,099</span>
-            <span class="discounted-price">₹2,499</span>
-            <span class="offer">56% off</span>
-          </div>
-
-          <div class="features">
-            <span>ENX Technology</span>
-            <span>BEAST Mode</span>
-            <span>Dual EQ Modes</span>
-          </div>
-
-          <div>
-            <button class="btn">Add to Cart</button>
-          </div>
-
-        </div>
-
-
-        <div class="pictures">
-          <img src="/images/g11.webp" alt="">
-          <br>
-          <div>
-            <p>42 Hours Playback</p>
-          </div>
-
-        </div>
-
-        <div class="info">
-          <span>
-            &#11088;5.0 |35
-            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Mask_group-10.png?v=1677571152"
-              style="width:11px;height:11px;" alt="verified reviews">
-          </span>
-          <br>
-          <h3>Airdopes 170</h3>
-          <div>
-            <span class="original-price">₹1,599</span>
-            <span class="discounted-price">₹3,499</span>
-            <span class="offer">54% off</span>
-          </div>
-
-          <div class="features">
-            <span>ENX Technology</span>
-            <span>BEAST Mode</span>
-            <span>13mm Drivers</span>
-          </div>
-
-          <div>
-            <button class="btn">Add to Cart</button>
-          </div>
-
-        </div>
-
-
-        <div class="pictures">
-          <img src="/images/g12.webp" alt="">
-          <br>
-          <div>
-            <p>40 Hours Playback</p>
-          </div>
-
-        </div>
-
-        <div class="info">
-          <span>
-            &#11088;4.6 |34
-            <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Mask_group-10.png?v=1677571152"
-              style="width:11px;height:11px;" alt="verified reviews">
-          </span>
-          <br>
-          <h3>Airdopes 170 Pro</h3>
-          <div>
-            <span class="original-price">₹1,099</span>
-            <span class="discounted-price">₹2,999</span>
-            <span class="offer">63% off</span>
-          </div>
-
-          <div class="features">
-            <span>ENX Technology</span>
-            <span>BEAST Mode</span>
-            <span>13mm Drivers</span>
-          </div>
-
-          <div>
-            <button class="btn">Add to Cart</button>
-          </div>
-
-        </div>
-      </div>
-
-
+      </div> -->
     </section>
+
   </div>
+
   <section id="footer">
     <div class="banner-boat">
       <div class="input-section">
@@ -571,9 +558,7 @@
   </section>
 
   <section id="social-media">
-
     <div class="icons">
-
       <div class="logos">
         <span>Let's get social</span>
         <a href="#"> <i class="fab fa-facebook-f"></i></a>
@@ -593,15 +578,15 @@
       </div>
 
       <div class="address">
-        For queries contact us: Manager, Imagine Marketing Limited Unit no. 204 & 205, 2nd floor, D-wing & E-wing,<br>
-        Corporate Avenue, Andheri Ghatkopar Link Road, Mumbai, Maharashtra-400093, India
+        For queries contact us: Manager, Imagine Marketing Limited Unit no.
+        204 & 205, 2nd floor, D-wing & E-wing,<br />
+        Corporate Avenue, Andheri Ghatkopar Link Road, Mumbai,
+        Maharashtra-400093, India
       </div>
-
     </div>
-
   </section>
-
 
 </body>
 
 </html>
+<script src="/scripts/products.js"></script>
