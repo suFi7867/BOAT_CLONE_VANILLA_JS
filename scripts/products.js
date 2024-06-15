@@ -6,9 +6,8 @@ const products = [
     rating: "5.0",
     reviews: "77",
     name: "Nirvana lon",
-    originalPrice: 1999,
-    discountedPrice: "₹7,999",
-    offer: "75% off",
+    price: 1999,
+    originalPrice: 7999,
     features: ["ENX Technology"],
     category: "Earphones",
   },
@@ -19,9 +18,8 @@ const products = [
     rating: "4.8",
     reviews: "1359",
     name: "Airdopes 131",
-    originalPrice: 899,
-    discountedPrice: "₹2,999",
-    offer: "70% off",
+    price: 899,
+    originalPrice: 2999,
     features: ["ENX Technology"],
     category: "Earphones",
   },
@@ -32,9 +30,8 @@ const products = [
     rating: "4.9",
     reviews: "191",
     name: "Airdopes 131 Pro",
-    originalPrice: 1099,
-    discountedPrice: "₹2,999",
-    offer: "63% off",
+    price: 1099,
+    originalPrice: 2999,
     features: ["ENX Technology"],
     category: "Earphones",
   },
@@ -45,9 +42,8 @@ const products = [
     rating: "4.9",
     reviews: "172",
     name: "Airdopes 161",
-    originalPrice: 1099,
-    discountedPrice: "₹2,499",
-    offer: "56% off",
+    price: 1099,
+    originalPrice: 2499,
     features: ["ENX Technology"],
     category: "Earphones",
   },
@@ -58,9 +54,8 @@ const products = [
     rating: "5.0",
     reviews: "35",
     name: "Airdopes 170",
-    originalPrice: 1599,
-    discountedPrice: "₹3,499",
-    offer: "54% off",
+    price: 1599,
+    originalPrice: 3499,
     features: ["ENX Technology"],
     category: "Earphones",
   },
@@ -71,9 +66,8 @@ const products = [
     rating: "4.6",
     reviews: "34",
     name: "Airdopes 170 Pro",
-    originalPrice: 1099,
-    discountedPrice: "₹2,999",
-    offer: "63% off",
+    price: 1099,
+    originalPrice: 2999,
     features: ["ENX Technology"],
     category: "Earphones",
   },
@@ -84,9 +78,8 @@ const products = [
     rating: "4.9",
     reviews: "172",
     name: "Airdopes 161",
-    originalPrice: 1099,
-    discountedPrice: "₹2,499",
-    offer: "56% off",
+    price: 1099,
+    originalPrice: 2499,
     features: ["ENX Technology"],
     category: "Earphones",
   },
@@ -97,9 +90,8 @@ const products = [
     rating: "5.0",
     reviews: "35",
     name: "Airdopes 170",
-    originalPrice: 1599,
-    discountedPrice: "₹3,499",
-    offer: "54% off",
+    price: 1599,
+    originalPrice: 3499,
     features: ["ENX Technology"],
     category: "Earphones",
   },
@@ -110,9 +102,8 @@ const products = [
     rating: "4.6",
     reviews: "34",
     name: "Airdopes 170 Pro",
-    originalPrice: 1099,
-    discountedPrice: "₹2,999",
-    offer: "63% off",
+    price: 1099,
+    originalPrice: 2999,
     features: ["ENX Technology"],
     category: "Earphones",
   },
@@ -123,9 +114,8 @@ const products = [
     rating: "4.9",
     reviews: "172",
     name: "Airdopes 161",
-    originalPrice: 1099,
-    discountedPrice: "₹2,499",
-    offer: "56% off",
+    price: 1099,
+    originalPrice: 2499,
     features: ["ENX Technology"],
     category: "Earphones",
   },
@@ -136,9 +126,8 @@ const products = [
     rating: "5.0",
     reviews: "35",
     name: "Airdopes 170",
-    originalPrice: 1599,
-    discountedPrice: "₹3,499",
-    offer: "54% off",
+    price: 1599,
+    originalPrice: 3499,
     features: ["ENX Technology"],
     category: "Earphones",
   },
@@ -149,9 +138,8 @@ const products = [
     rating: "4.6",
     reviews: "34",
     name: "Airdopes 170 Pro",
-    originalPrice: 1099,
-    discountedPrice: "₹2,999",
-    offer: "63% off",
+    price: 1099,
+    originalPrice: 2999,
     features: ["ENX Technology"],
     category: "Earphones",
   },
@@ -164,9 +152,8 @@ const products = [
     rating: "4.6",
     reviews: "34",
     name: "EnergyShroom PB300",
-    originalPrice: 1399,
-    discountedPrice: "₹2,999",
-    offer: "63% off",
+    price: 1399,
+    originalPrice: 2999,
     features: ["22W Fast Charging"],
     category: "Power Bank",
   },
@@ -179,9 +166,8 @@ const products = [
     rating: "4.6",
     reviews: "34",
     name: "EnergyShroom PB400",
-    originalPrice: 1299,
-    discountedPrice: "₹2,999",
-    offer: "63% off",
+    price: 1299,
+    originalPrice: 2999,
     features: ["64W Fast Charging"],
     category: "Power Bank",
   },
@@ -217,6 +203,10 @@ function appendProductsToDOM(products) {
     // productContainer.setAttribute("product-id",product.id)
     productContainer.classList.add("product");
 
+    const discountPercentage = Math.round(
+      ((product.originalPrice - product.price) / product.originalPrice) * 100
+    );
+
     const productHTML = `
         
           <div class="pictures" >
@@ -236,10 +226,12 @@ function appendProductsToDOM(products) {
             <h3>${product.name}</h3>
             <div>
               <span class="original-price">${formatter.format(
+                product.price
+              )}</span>
+              <span class="discounted-price">${formatter.format(
                 product.originalPrice
               )}</span>
-              <span class="discounted-price">${product.discountedPrice}</span>
-              <span class="offer">${product.offer}</span>
+              <span class="offer">${discountPercentage}%</span>
             </div>
             <div class="features">
               ${product.features
@@ -299,11 +291,11 @@ function sortFunction(event) {
     });
   } else if (sortedValue === "htl") {
     sortedData = products.sort(function (a, b) {
-      return b.originalPrice - a.originalPrice;
+      return b.price - a.price;
     });
   } else if (sortedValue === "lth") {
     sortedData = products.sort(function (a, b) {
-      return a.originalPrice - b.originalPrice;
+      return a.price - b.price;
     });
   }
   appendProductsToDOM(sortedData);
@@ -321,7 +313,7 @@ function handleSearch(event) {
 }
 function addItemsToCart(product) {
   let flag = true;
-  
+
   cartData.forEach(function (el) {
     if (el.id === product.id) {
       flag = false;

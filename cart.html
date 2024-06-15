@@ -15,19 +15,21 @@
     <section id="header" class="component">
         <div id="nav" class="component">
             <div class="left-nav">
-                <img src="/images/logo.svg" alt="boat-logo" />
-                <a href="#">Categories</a>
-                <a href="#">boAt Personalisation</a>
-                <a href="#">Gift with Boat</a>
-                <a href="#">Corporate Orders</a>
-                <a href="#">More</a>
+                <a href="index.html"> <img src="/images/logo.svg" alt="boat-logo" /></a>
+                <a href="products.html">Categories</a>
+                <a href="products.html">boAt Personalisation</a>
+                <a href="products.html">Gift with Boat</a>
+                <a href="products.html">Corporate Orders</a>
+                <a href="index.html" class="home-link">Home</a>
             </div>
 
             <div class="right-nav">
                 <input type="text" id="search" placeholder="Search Earphones" />
                 <img src="/images/Profile-1.webp" alt="" />
-                <div style="display: flex;"> <i class="fas fa-shopping-bag"></i> <span class="product-count"></span>
-                </div>
+                <a href="cart.html">
+                    <div style="display: flex;"> <i class="fas fa-shopping-bag"></i> <span class="product-count"></span>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
@@ -60,22 +62,25 @@
                 <h4>PRICE DETAILS</h4>
                 <div class="price-details">
                     <div>
-                        <span>Cart Items :</span> <span id="total-items"></span>
+                        <span>Cart Items :</span> <span id="total-items">0</span>
                     </div>
                     <div>
-                        <span>Total MRP :</span> <span id="total-price"></span>
+                        <span>Total MRP :</span> <span id="total-price">0</span>
                     </div>
                     <div>
-                        <span>Discount :</span> <span id="discount-price"></span>
+                        <span>Discount :</span> <span id="discount-price">0</span>
                     </div>
-         
+
                 </div>
             </div>
 
             <hr>
 
             <div class="total-amount">
-                <h4>Total Amount</h4>
+                <div>
+                    <h4>Total Amount</h4> <span id="total-amount">0</span>
+                </div>
+
                 <button>Place Order</button>
             </div>
         </div>
@@ -85,3 +90,4 @@
 
 </html>
 <script src="/scripts/cart.js"></script>
+<script src="/scripts/common.js"></script>
