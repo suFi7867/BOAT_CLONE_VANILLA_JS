@@ -206,6 +206,7 @@ function appendProductsToDOM(products) {
     const discountPercentage = Math.round(
       ((product.originalPrice - product.price) / product.originalPrice) * 100
     );
+    let checkIsInCart = checkProductInCart(product.id)
 
     const productHTML = `
         
@@ -239,7 +240,7 @@ function appendProductsToDOM(products) {
                 .join("")}
             </div>
             <div>
-              <button class="cart-btn">Add to Cart</button>
+              <button class="${checkIsInCart ? 'cart-btn':'cart-btn-added'}">Add to Cart</button>
             </div>
           </div>
      
@@ -248,10 +249,13 @@ function appendProductsToDOM(products) {
     productContainer.innerHTML = productHTML;
     container.appendChild(productContainer);
 
-    const cartBtn = productContainer.querySelector(".cart-btn");
-    cartBtn.addEventListener("click", () => {
-      addItemsToCart(product);
+    const cartBtn = productContainer.querySelector(".cart-btn ");
+  if(cartBtn)
+  {
+    cartBtn.addEventListener("click", (e) => {
+      addItemsToCart(product, e.target);
     });
+  }
   });
 }
 
@@ -311,17 +315,12 @@ function handleSearch(event) {
   });
   appendProductsToDOM(searchData);
 }
-function addItemsToCart(product) {
-  let flag = true;
+function addItemsToCart(product, target) {
 
-  cartData.forEach(function (el) {
-    if (el.id === product.id) {
-      flag = false;
-      return alert("product already exist");
-    }
-  });
 
-  if (flag) {
+  let isInCart = checkProductInCart(product.id)
+
+  if (isInCart) {
     let cartObj = {
       ...product,
       quantity: 1,
@@ -329,5 +328,22 @@ function addItemsToCart(product) {
     cartData.push(cartObj);
     localStorage.setItem("cartData", JSON.stringify(cartData));
     document.querySelector(".product-count").innerHTML = cartData.length;
+    target.innerHTML = "Added";
+    target.style.backgroundColor = "#1b1ba1";
+  }else{
+    alert("Product already in the cart")
   }
 }
+
+function checkProductInCart(id) {
+  let flag = true;
+  cartData.forEach(function (el) {
+    if (el.id === id) {
+      flag = false;
+    }
+  });
+//flag=false product is in the cart
+  return flag
+}
+
+

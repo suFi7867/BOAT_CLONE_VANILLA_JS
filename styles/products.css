@@ -229,6 +229,19 @@
   font-weight: 500;
 }
 
+.cart-btn-added {
+  /* border: 2px solid red; */
+  margin-top: 15px;
+  height: 40px;
+  width: 193px;
+  background: #005c99;
+  padding: 12px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
 #footer {
   background: #e7f0f5;
   margin-top: 40px;

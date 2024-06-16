@@ -15,7 +15,7 @@ function appendProductsToDOM(data) {
     container.innerHTML = `  <img src="https://bakestudio.in/assets/images/cart/empty-cart.gif"  alt="">`;
   }
 
-  data.forEach((product) => {
+  data.forEach((product,index) => {
     const productContainer = document.createElement("div");
     // productContainer.setAttribute("product-id",product.id)
     productContainer.classList.add("card");
@@ -29,7 +29,7 @@ function appendProductsToDOM(data) {
           <option value="2" ${product.quantity==2 ? "selected" : ""}>Qty-2</option>
           <option value="3" ${product.quantity==3 ? "selected" : ""}>Qty-3</option>
       </select>
-      <button>Delete</button>`;
+      <button class="delete-btn">Delete</button>`;
 
     productContainer.innerHTML = productHTML;
     container.appendChild(productContainer);
@@ -39,6 +39,14 @@ function appendProductsToDOM(data) {
       // addItemsToCart(product);
       handleQty(product.id, e.target.value);
     });
+
+    const deleteBtn = productContainer.querySelector(".delete-btn");
+    deleteBtn.addEventListener("click", () => {
+      // addItemsToCart(product);
+      handleDelete(product,index);
+    });
+
+
   });
 }
 
@@ -81,7 +89,7 @@ function calculateTotalAmount() {
   }, initiaCartValues);
 
   cartValues.discount = Math.round(
-    ((cartValues.totalMRP - cartValues.totalAmount) / cartValues.totalMRP) * 100
+    ((cartValues.totalMRP || 0 - cartValues.totalAmount || 0) / cartValues.totalMRP || 0) * 100
   );
   document.querySelector("#total-items").innerHTML = cartValues.items;
   document.querySelector("#total-price").innerHTML = formatter.format(
@@ -106,3 +114,12 @@ function handleQty(id, val) {
   localStorage.setItem("cartData", JSON.stringify(updatedCartData));
   calculateTotalAmount()
 }
+
+ let handleDelete = ((el,index) =>{
+ 
+  cartData.splice(index,1)
+  localStorage.setItem("cartData",JSON.stringify(cartData))
+  appendProductsToDOM(cartData);
+  calculateTotalAmount();
+  document.querySelector(".product-count").innerHTML = cartData.length;
+})

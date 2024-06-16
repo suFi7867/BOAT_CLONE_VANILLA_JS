@@ -19,7 +19,7 @@
     flex-direction: column;
     gap: 10px;
     flex: 3;
-    max-height: 350px;
+    /* max-height: 350px; */
 
 }
 
@@ -60,6 +60,7 @@
 #cart-products>.payment {
     /* border: 2px solid aqua; */
     border-radius: 15px;
+    height: fit-content;
     padding: 17px;
     display: flex;
     flex-direction: column;
