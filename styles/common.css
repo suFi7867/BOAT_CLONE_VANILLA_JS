@@ -248,3 +248,170 @@
   font-size: x-large;
   width: auto;
 }
+
+/* footer section */
+
+
+#footer {
+  background: #e7f0f5;
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+#footer {
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+#footer img {
+  padding-left: 50px;
+  padding-top: 30px;
+}
+
+#footer h2 {
+  margin-left: 30px;
+  padding-top: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  opacity: 1;
+  margin-bottom: 5px;
+}
+
+.banner-boat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* flex-wrap: wrap; */
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.input-section img {
+  max-width: 100%;
+  height: auto;
+}
+
+.input-section h2 {
+  margin: 10px 0;
+}
+
+.input-section input {
+  height: 50px;
+  width: 250px;
+  margin-left: 48px;
+  margin-top: 10px;
+  padding: 8px;
+  padding-left: 5px;
+  border: solid 1px #e1e6eb;
+  border-radius: 4px;
+  background-color: white;
+  text-align: center;
+}
+
+.itemlist {
+ display: grid;
+ grid-template-columns: repeat(3,1fr);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.itemlist .itemlist-1 {
+  padding: 0px 40px;
+}
+
+.itemlist .itemlist-2 {
+  padding: 0px 40px;
+}
+
+.itemlist .itemlist-3 {
+  padding: 0px 40px;
+}
+
+.itemlist>div {
+  flex: 1;
+}
+
+.itemlist h4 {
+  margin-bottom: 10px;
+}
+
+.itemlist ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.itemlist li {
+  margin-bottom: 5px;
+}
+
+#social-media {
+  margin-top: 40px;
+}
+
+.icons {
+  background: #e7f0f5;
+  height: 231px;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons .logos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.logos span {
+  font-size: 16px;
+  font-weight: normal;
+  color: #090a0a;
+  text-align: center;
+}
+
+.logos a {
+  padding-top: 18px;
+  text-decoration: none;
+  background-color: transparent;
+  color: black;
+  cursor: pointer;
+  height: 55px;
+  width: auto;
+}
+
+.Policy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 15px;
+  font-size: 14px;
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 13px;
+  color: #a7afb7;
+}
+
+.address {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 13px;
+  color: #a7afb7;
+}

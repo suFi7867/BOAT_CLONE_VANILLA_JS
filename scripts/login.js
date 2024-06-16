@@ -7,7 +7,9 @@ let formTag = document.querySelector("#login-form");
 formTag.addEventListener("submit", handleLogin);
 
 let logoutBtn = document.querySelector("#logoutBtn");
-logoutBtn.addEventListener("click", handleLogOut);
+if (logoutBtn) {
+  logoutBtn.addEventListener("click", handleLogOut);
+}
 
 var modal = document.getElementById("myModal");
 let userName = "";
@@ -65,13 +67,15 @@ function handleLogOut() {
 
 function updateModal() {
   let isUserExist = localStorage.getItem("loggedUser");
-  if (isUserExist) {
+  if (isUserExist && unknownUserBox) {
     unknownUserBox.style.display = "none";
     userExistBox.style.display = "block";
     document.querySelector(".user-name").innerText = isUserExist;
   } else {
+  if(unknownUserBox){
     unknownUserBox.style.display = "block";
     userExistBox.style.display = "none";
+  }
   }
 }
 

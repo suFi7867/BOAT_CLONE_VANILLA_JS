@@ -18,18 +18,33 @@
       <section id="header" class="component">
         <div id="nav" class="component">
           <div class="left-nav">
-           <a href="index.html"> <img src="/images/logo.svg" alt="boat-logo" /></a>
+            <a href="index.html"> <img src="/images/logo.svg" alt="boat-logo" /></a>
             <a href="products.html">Categories</a>
             <a href="products.html">boAt Personalisation</a>
             <a href="products.html">Gift with Boat</a>
             <a href="products.html">Corporate Orders</a>
             <a href="index.html" class="home-link">Home</a>
           </div>
-  
+
           <div class="right-nav">
             <input type="text" id="search" placeholder="Search Earphones" />
-            <img src="/images/Profile-1.webp" alt="" />
-            <a href="cart.html"><div style="display: flex;"> <i class="fas fa-shopping-bag"></i> <span class="product-count"></span></div></a>
+
+            <div class="popup"> <img src="/images/Profile-1.webp" alt="" />
+            <div class="popuptext">
+<div class="unknown-user">
+  <h2>Login</h2>
+  <button id="myBtn">Login</button>
+</div>
+<div class="is-user-exist">
+  <div class="user-name"></div>
+  <button id="logoutBtn">Logout</button>
+</div>
+
+            </div>
+            </div>
+            <a href="cart.html">
+              <div style="display: flex;"> <i class="fas fa-shopping-bag"></i> <span class="product-count"></span></div>
+            </a>
           </div>
         </div>
       </section>
@@ -719,9 +734,11 @@
   var span = document.getElementsByClassName("close")[0];
 
   // When the user clicks the button, open the modal
-  btn.onclick = function () {
-    modal.style.display = "block";
-  };
+  if (btn) {
+    btn.onclick = function () {
+      modal.style.display = "block";
+    };
+  }
 
   // When the user clicks on <span> (x), close the modal
   span.onclick = function () {
