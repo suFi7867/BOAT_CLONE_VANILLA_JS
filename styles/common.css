@@ -185,7 +185,9 @@
 #header {
   position: sticky;
   top: 0;
+  max-width: unset;
   z-index: 10;
+  margin-bottom: unset;
   background-color: white;
 }
 
@@ -242,7 +244,7 @@
 
 .right-nav input {
   text-align: center;
-  width: 40%;
+  width: auto;
   height: auto;
   margin-left: 45px;
   height: 30px;

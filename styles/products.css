@@ -129,6 +129,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  width: fit-content;
   /* padding: 4px; */
 }
 
@@ -138,8 +139,8 @@
 
 #products .pictures img {
   padding: 3px;
-  height: 159px;
-  width: 159px;
+  height: auto;
+  width: 10rem;
   border-radius: 8px 8px 0 0;
 }
 
@@ -219,7 +220,7 @@
   /* border: 2px solid red; */
   margin-top: 15px;
   height: 40px;
-  width: 193px;
+  width: auto;
   background: #1a2024;
   border: 1px solid #1a2024;
   padding: 12px;
@@ -233,7 +234,7 @@
   /* border: 2px solid red; */
   margin-top: 15px;
   height: 40px;
-  width: 193px;
+  width: auto;
   background: #005c99;
   padding: 12px;
   border-radius: 10px;
@@ -410,3 +411,103 @@
   font-size: 13px;
   color: #a7afb7;
 }
+
+
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  #products {
+    margin-top: 10px;
+    gap: 10px;
+    /* padding: 4px; */
+  }
+
+
+  #products .pictures img {
+    padding: 3px;
+    height: auto;
+    width: 100px;
+    border-radius: 8px 8px 0 0;
+  }
+
+
+  .pictures p {
+
+    margin-left: 3px;
+    padding: 3px;
+    font-size: 10px;
+
+
+    width: auto;
+
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    padding: 3px;
+    /* background: whitesmoke; */
+    /* background-color: #eff4f7; */
+  }
+
+  .info h3 {
+
+    font-size: 12px;
+
+  }
+
+  .original-price {
+    font-size: 12px;
+
+  }
+
+  .discounted-price {
+
+    font-size: 10px;
+  }
+
+  .offer {
+    font-size: 10px;
+
+  }
+
+
+
+  .features span, .info > span {
+    font-size: 8px;
+
+  }
+
+  .cart-btn {
+    /* border: 2px solid red; */
+    margin-top: unset;
+    height: fit-content;
+    width: auto;
+
+
+    padding: 6px;
+    border-radius: 10px;
+
+    font-size: 10px;
+
+  }
+
+  .cart-btn-added {
+    /* border: 2px solid red; */
+    margin-top: unset;
+    height: fit-content;
+    width: auto;
+
+
+    padding: 6px;
+    border-radius: 10px;
+
+    font-size: 10px;
+    ;
+  }
+
+}
+
+/* Smartphone */
+@media (min-width: 340px) and (max-width: 767px) {}

@@ -24,87 +24,6 @@
   margin: auto;
 }
 
-#header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background-color: white;
-}
-
-/* section {
-  border: 1px solid !important;
-} */
-
-#nav {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: space-between;
-  max-width: 1600px;
-  margin: auto;
-}
-
-#nav {
-  width: 100%;
-  background-color: white;
-  z-index: 1000;
-}
-
-.left-nav {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  gap: 20px;
-  width: 70%;
-  height: 60px;
-  font-size: 14px;
-}
-
-.left-nav img {
-  width: 100px;
-  margin-left: -50px;
-  margin-right: 50px;
-}
-
-.left-nav a {
-  text-decoration: none;
-  color: #090a0a;
-}
-
-.right-nav {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: flex-start;
-  gap: 20px;
-  width: 30%;
-  height: 60px;
-}
-
-.right-nav input {
-  text-align: center;
-  width: 40%;
-  height: auto;
-  margin-left: 45px;
-  height: 30px;
-  border-radius: 2em;
-}
-
-.right-nav img {
-  height: 30px;
-  width: auto;
-}
-
-.right-nav i {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 60px;
-  font-size: x-large;
-  width: auto;
-}
-
 /* #mid img {
   padding-top: 10px;
 } */
@@ -146,18 +65,20 @@
 }
 
 .shop-categories::-webkit-scrollbar {
-  width: 10px;
+  height: 10px;
 }
 
 /* Track */
 .shop-categories::-webkit-scrollbar-track {
   background: #f1f1f1;
+  height: 10px;
 }
 
 /* Handle */
 .shop-categories::-webkit-scrollbar-thumb {
   background: rgb(216, 13, 13);
   border-radius: 20px;
+  height: 10px;
 }
 
 /* Handle on hover */
@@ -563,6 +484,9 @@
 /* Desktops */
 
 @media (min-width: 1024px) {
+  #header{
+    
+  }
   #nav {
     /* margin: 8px 0px; */
     width: 100%;
@@ -572,13 +496,12 @@
   .right-nav input {
     text-align: center;
     height: auto;
-    margin-left: 45px;
     height: 30px;
     border-radius: 2em;
   }
 
   .shop-categories {
-    padding: 0px 45px;
+    padding: 0px 45px 10px 45px;
     margin: 0px 15px;
     display: flex;
     /* gap: 2px;
@@ -625,7 +548,9 @@
 }
 
 /* Tablets */
-@media (min-width: 768px) and (max-width: 1023px) {}
+@media (min-width: 768px) and (max-width: 1023px) {
+
+}
 
 /* Smartphone */
 @media (min-width: 340px) and (max-width: 767px) {}
