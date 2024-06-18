@@ -220,8 +220,7 @@
   height: 60px;
   font-size: 14px;
 }
-
-.left-nav img {
+#nav >a img {
   width: 100px;
   margin-left: -50px;
   margin-right: 50px;
@@ -431,85 +430,17 @@
   font-size: 13px;
   color: #a7afb7;
 }
-
-/* hamburger menu */
-/* CSS for hamburger menu */
-.hamburger-menu {
-  display: none;
-  /* Initially hidden on larger screens */
-}
-
-.hamburger-icon {
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
-  padding: 10px;
-}
-
-.bar {
-  width: 25px;
-  height: 3px;
-  background-color: #333;
-  margin: 4px 0;
-  transition: 0.4s;
-}
-
-/* CSS to hide mobile/tablet nav links initially */
-.mobile-nav-links {
+.hamburger{
   display: none;
 }
-
-/* Media query for tablet and mobile */
-@media (max-width: 768px) {
-  .right-nav {
-    display: flex;
-    align-items: center;
-  }
-
-  .mobile-nav-links {
-    display: block;
-    /* Show mobile/tablet nav links */
-    position: absolute;
-    background-color: #f9f9f9;
-    width: 100%;
-    top: 60px;
-    /* Adjust as per your header height */
-    left: 0;
-    z-index: 1000;
-    padding: 10px 0;
-    text-align: center;
-  }
-
-  .mobile-nav-links a {
-    display: block;
-    padding: 10px 0;
-    color: #333;
-    text-decoration: none;
-  }
-
-  .mobile-nav-links a:hover {
-    background-color: #ddd;
-  }
-
-  .hamburger-menu {
-    display: block;
-    /* Show hamburger icon */
-  }
-
-  .right-nav {
-    justify-content: flex-end;
-  }
-    /* Adjustments for mobile and tablet screens */
-    .popup {
-      display: none; /* Hide profile popup on small screens */
-    }
-}
-/* end of hamburger menu css */
-
 
 
   /* Smartphone */
   @media (min-width: 340px) and (max-width: 767px) {
+    #nav >a img {
+      margin-left: unset;
+     
+  }
     .banner-boat {
       display: flex;
       justify-content: space-between;
@@ -529,5 +460,46 @@
     .itemlist .itemlist-3 {
       padding: 5px;
     }
+ 
 
   }
+
+
+/* tablet and mobile */
+@media (min-width: 340px) and (max-width: 1023px) 
+{
+  #nav{
+    padding-right: 20px;
+    
+  }
+  #nav .left-nav {
+    display: none;
+    position: fixed;
+    top: 70px;
+    border: 2px solid #eeee;
+    border-radius: 10px;
+    background: white;
+    left: 10px;
+    right: 10px;
+    flex-direction: column;
+    width: unset;
+    height: 60vh;
+    font-size: 16px;
+    gap: 30px;
+}
+#nav .right-nav {
+ width: unset;
+}
+  #nav #search{
+    display: none;
+  }
+  .hamburger{
+    display: block;
+  }
+  .hamburger >img{
+    width: 30px;
+  }
+  .hamburger >img:nth-child(2){
+    display: none;
+  }
+}
