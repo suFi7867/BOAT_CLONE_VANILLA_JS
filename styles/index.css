@@ -263,7 +263,7 @@
   top: -35px;
   left: 50%;
   transform: translateX(-50%);
-  width: 180px;
+  width: 100%;
   border: 1px solid white;
   border-radius: 10px !important;
   padding: 6px 10px !important;
@@ -318,11 +318,12 @@
   position: relative;
 }
 
+/* 
 .cart-btn button {
   position: absolute;
   top: 92px;
   text-align: center;
-}
+} */
 
 #services {
   margin-top: 15px;
@@ -407,9 +408,9 @@
   padding-right: 24px;
 }
 
-#press .press-container {
+/* #press .press-container {
   height: 280px;
-}
+} */
 
 #press h3 {
   font-size: 24px;
@@ -479,14 +480,19 @@
   text-align: center;
 }
 
+.btn-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 /* Responsive */
 
 /* Desktops */
 
-@media (min-width: 1024px) {
-  #header{
-    
-  }
+@media (min-width: 1024px) and (max-width: 1200px) {
+
+
   #nav {
     /* margin: 8px 0px; */
     width: 100%;
@@ -545,12 +551,124 @@
     font-size: 20px;
     line-height: 36px;
   }
+
+
+  #main-container {
+    gap: 10px;
+  }
+
+  .sub-container>.information-container {
+    padding: 7px;
+
+  }
+
+  .p-name a {
+
+    font-size: 14px;
+  }
+
+  .p-name span {
+
+    padding: 4px;
+  }
+
+  .prices>.original-price,
+  .prices>.discounted-price,
+  .prices>.offer {
+    font-size: 12px;
+  }
+
+  .sub-container>.information-container .ratings {
+    font-size: 10px;
+  }
+
+
+  .sub-container>.information-container .cart-btn button {
+
+    padding: 5px;
+
+    height: fit-content;
+    font-size: 10px !important;
+
+  }
+
 }
 
 /* Tablets */
 @media (min-width: 768px) and (max-width: 1023px) {
+  #main-container {
+    gap: 10px;
+  }
 
+  .sub-container>.information-container {
+    padding: 7px;
+
+  }
+
+  .p-name a {
+
+    font-size: 14px;
+  }
+
+  .p-name span {
+
+    padding: 4px;
+  }
+
+  .prices>.original-price,
+  .prices>.discounted-price,
+  .prices>.offer {
+    font-size: 12px;
+  }
+
+  .sub-container>.information-container .ratings {
+    font-size: 10px;
+  }
+
+
+  .sub-container>.information-container .cart-btn button {
+
+    padding: 5px;
+
+    height: fit-content;
+    font-size: 10px !important;
+
+  }
 }
 
 /* Smartphone */
-@media (min-width: 340px) and (max-width: 767px) {}
+@media (min-width: 340px) and (max-width: 767px) {
+  #main-container {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    justify-self: center;
+  }
+
+  #services {
+    margin: 0px 0px 20px;
+    padding: 5px;
+    font-size: 10px;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+  }
+.brands {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+.press-container {
+  display: flex;
+  flex-direction: column;
+}
+.para p {
+  font-size: 16px;
+  line-height: initial;
+}
+
+
+}

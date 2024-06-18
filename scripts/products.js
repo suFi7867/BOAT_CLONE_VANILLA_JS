@@ -212,7 +212,6 @@ function appendProductsToDOM(products) {
         
           <div class="pictures" >
             <img src="${product.image}" alt="${product.name}" />
-            <br />
             <div>
               <p>${product.playback}</p>
             </div>
@@ -223,7 +222,7 @@ function appendProductsToDOM(products) {
               <img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Mask_group-10.png?v=1677571152"
                 style="width: 11px; height: 11px" alt="verified reviews" />
             </span>
-            <br />
+      
             <h3>${product.name}</h3>
             <div>
               <span class="original-price">${formatter.format(

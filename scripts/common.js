@@ -35,3 +35,15 @@ productCount.innerHTML = cards.length;
       modal.style.display = "none";
     }
   };
+
+
+  //js for hamburger menu//
+  
+  document.addEventListener('DOMContentLoaded', function () {
+    const hamburgerIcon = document.querySelector('.hamburger-icon');
+    const mobileNavLinks = document.querySelector('.mobile-nav-links');
+
+    hamburgerIcon.addEventListener('click', function () {
+      mobileNavLinks.classList.toggle('active'); // Toggle 'active' class for showing/hiding mobile nav links
+    });
+  });
