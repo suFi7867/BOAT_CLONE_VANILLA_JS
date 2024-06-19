@@ -490,7 +490,7 @@
 }
 
 /* Smartphone */
-@media (min-width: 340px) and (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 767px) {
   #products {
     /* display: grid; */
     grid-template-columns: repeat(2, 1fr);
