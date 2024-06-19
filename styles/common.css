@@ -503,3 +503,10 @@
     display: none;
   }
 }
+
+/* mobile */
+@media (min-width: 340px) and (max-width: 767px){
+  #header{
+    padding: 0px;
+  }
+}
