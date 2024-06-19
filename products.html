@@ -79,20 +79,9 @@
 
     <section id="filter-sort" class="component">
       <div class="filter">
-        <button type="submit" is="toggle-button"
-          class="product-facet__meta-bar-item product-facet__meta-bar-item--filter hidden-pocket"
-          aria-controls="facet-filters" aria-expanded="false">
-          <svg focusable="false" width="16" height="16" class="icon icon--filters icon--inline" viewBox="0 0 16 16">
-            <path d="M0 4h16M0 12h16" fill="none" stroke="currentColor" stroke-width=""></path>
-            <circle cx="5" cy="4" r="2" fill="rgb(var(--background))" stroke="currentColor" stroke-width="2"></circle>
-            <circle cx="11" cy="12" r="2" fill="rgb(var(--background))" stroke="currentColor" stroke-width="2"></circle>
-          </svg>Filter By<svg focusable="false" width="12" height="8" class="icon icon--chevron" viewBox="0 0 12 8">
-            <path fill="none" d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="2"></path>
-          </svg>
-        </button>
 
         <select name="" id="filter-category">
-          <option value="Default">Default</option>
+          <option value="Default">Filter</option>
           <option value="Earphones">Earphones</option>
           <option value="Power Bank">Power Bank</option>
         </select>
@@ -105,18 +94,10 @@
       </div>
 
       <div class="sort">
-        <button>
-          <img alt="sort-by" width="12" height="12" class="icon mr-1 hidden-pocket"
-            src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/sort_2_1.png?v=1675078334" />
-          <span>Sort by:</span>
-          <span id="sort-by-selected-value" style="pointer-events: none">Featured</span>
-          <svg focusable="false" width="12" height="8" class="icon icon--chevronicon--inline" viewBox="0 0 12 8">
-            <path fill="none" d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="2"></path>
-          </svg>
-        </button>
+      
 
         <select name="" id="sort-products">
-          <option value="Default">Default</option>
+          <option value="Default">Sort</option>
           <option value="htl">High to Low-Price</option>
           <option value="lth">Low to High-Price</option>
           <option value="asc">Ascending A-Z</option>
