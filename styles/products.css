@@ -538,91 +538,107 @@
     /* display: grid; */
     grid-template-columns: repeat(2, 1fr);
     gap: unset;
+    padding: 0px;
+    margin: 0px 10px;
+  }
+
+  #products>.product {
+    width: 100%;
   }
 
   #products>.product {
     flex-direction: column;
-    border-radius: 0px;
-    border: 1px solid white;
+    width: 100%;
+
   }
 
   #products .pictures img {
-    padding: 3px;
-    height: auto;
-    width: 100px;
-    border-radius: 8px 8px 0 0;
+    height: 150px;
+    object-fit: cover;
+    border: 1px solid white;
   }
 
   .product {
     display: flex;
     gap: 1px;
     padding: 5px;
-
-
   }
 
-  .pictures p {
-    padding: 2px;
+  .pictures>div {
+    position: relative;
+  }
+
+  .pictures>div>p {
     font-size: 10px;
-    width: fit-content;
-    margin: unset;
+    border: 2px solid red;
+    font-size: 10px;
+    width: 100%;
+    position: absolute;
+    top: -156px;
+    right: 8px;
+    border: none;
+    background: transparent;
+    color: #fff;
   }
-
-  .info {
-    display: flex;
-    flex-direction: column;
-    padding: 3px;
-  }
-
-  .info h3 {
-    font-size: 9px;
-  }
-
-  .original-price {
-    font-size: 9px;
-  }
-
-  .discounted-price {
-    font-size: 7px;
-  }
-
-  .offer {
-    font-size: 7px;
-  }
-
-  .features {
-    display: grid;
-
-    margin-top: unset;
-  }
-  .features span {
-    padding: 3px 6px 3px;
-    background-color: #b8bdc04a;
-    line-height: 1.0;
-    color: #1a2024;
-    width: fit-content;
-    
-}
-  .features span,
-  .info>span {
-    font-size: 5px;
-  }
-
-  .cart-btn {
-    margin-top: unset;
-    height: fit-content;
-    width: fit-content;
-    padding: 4px;
-    border-radius: 6px;
-    font-size: 8px;
 }
 
-  .cart-btn-added {
-    margin-top: unset;
-    height: fit-content;
-    width: auto;
-    padding: 6px;
-    border-radius: 10px;
-    font-size: 10px;
-  }
+.info {
+  display: flex;
+  flex-direction: column;
+  padding: 3px;
+}
+
+.info h3 {
+  font-size: 9px;
+}
+
+.original-price {
+  font-size: 9px;
+}
+
+.discounted-price {
+  font-size: 7px;
+}
+
+.offer {
+  font-size: 7px;
+}
+
+.features {
+  display: grid;
+
+  margin-top: unset;
+}
+
+.features span {
+  padding: 3px 6px 3px;
+  background-color: #b8bdc04a;
+  line-height: 1.0;
+  color: #1a2024;
+  width: fit-content;
+
+}
+
+.features span,
+.info>span {
+  font-size: 5px;
+}
+
+.cart-btn {
+  margin-top: unset;
+  height: fit-content;
+  width: fit-content;
+  padding: 4px;
+  border-radius: 6px;
+  font-size: 8px;
+}
+
+.cart-btn-added {
+  margin-top: unset;
+  height: fit-content;
+  width: auto;
+  padding: 6px;
+  border-radius: 10px;
+  font-size: 10px;
+}
 }
