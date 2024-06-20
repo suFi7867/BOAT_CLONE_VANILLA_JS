@@ -133,7 +133,6 @@
 
 .features {
   display: grid;
-  grid-template-columns: repeat(2, auto);
   gap: 10px;
   margin-top: 5px;
 }
@@ -531,7 +530,7 @@
     padding: 7px;
     border-radius: 7px;
     border: none;
-   width: -webkit-fill-available;
+    width: -webkit-fill-available;
 
   }
 
@@ -554,11 +553,19 @@
     border-radius: 8px 8px 0 0;
   }
 
+  .product {
+    display: flex;
+    gap: 1px;
+    padding: 5px;
+
+
+  }
+
   .pictures p {
-    margin-left: 3px;
-    padding: 3px;
+    padding: 2px;
     font-size: 10px;
-    width: auto;
+    width: fit-content;
+    margin: unset;
   }
 
   .info {
@@ -568,34 +575,47 @@
   }
 
   .info h3 {
-    font-size: 10px;
+    font-size: 9px;
   }
 
   .original-price {
-    font-size: 10px;
+    font-size: 9px;
   }
 
   .discounted-price {
-    font-size: 8px;
+    font-size: 7px;
   }
 
   .offer {
-    font-size: 8px;
+    font-size: 7px;
   }
 
+  .features {
+    display: grid;
+
+    margin-top: unset;
+  }
+  .features span {
+    padding: 3px 6px 3px;
+    background-color: #b8bdc04a;
+    line-height: 1.0;
+    color: #1a2024;
+    width: fit-content;
+    
+}
   .features span,
   .info>span {
-    font-size: 6px;
+    font-size: 5px;
   }
 
   .cart-btn {
     margin-top: unset;
     height: fit-content;
-    width: auto;
-    padding: 6px;
-    border-radius: 10px;
-    font-size: 10px;
-  }
+    width: fit-content;
+    padding: 4px;
+    border-radius: 6px;
+    font-size: 8px;
+}
 
   .cart-btn-added {
     margin-top: unset;
