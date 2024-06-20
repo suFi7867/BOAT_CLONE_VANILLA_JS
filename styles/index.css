@@ -708,13 +708,15 @@
     display: flex;
     flex-direction: column;
   }
+
   .category-text span {
     font-size: 20px;
-}
-.shop-categories{
-  gap: 15px;
-  margin-top: 16px;
-}
+  }
+
+  .shop-categories {
+    gap: 15px;
+    margin-top: 16px;
+  }
 
   .shop-categories>div>img {
     width: 70px;
@@ -844,39 +846,45 @@
   #services>div img {
     margin-top: -13px;
   }
-#ambassdors h3 {
+
+  #ambassdors h3 {
     font-size: 18px;
 
-}
-#ambassdors  .brands{
-  margin-top: 20px;
-}
-.brands {
-  gap: 6px;
-}
-.brands #text {
-  padding: 2px 0px 8px 0px;
-}
+  }
 
-.brands b {
-  font-size: 12px;
-}
+  #ambassdors .brands {
+    margin-top: 20px;
+  }
 
-#text .logo p {
-  padding: 0px;
-  color: #2f5b96;
-  font-size: 12px;
-  font-weight: bold;
-}
+  .brands {
+    gap: 6px;
+  }
 
-#text .logo p i {
-  margin-left: 2px;
-  font-size: 10px;
-}
-#press{
-  margin-top: 25px;
-}
-.para p {
-  font-size: 13px;
-}
+  .brands #text {
+    padding: 2px 0px 8px 0px;
+  }
+
+  .brands b {
+    font-size: 12px;
+  }
+
+  #text .logo p {
+    padding: 0px;
+    color: #2f5b96;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  #text .logo p i {
+    margin-left: 2px;
+    font-size: 10px;
+  }
+
+  #press {
+    margin-top: 25px;
+  }
+
+  .para p {
+    font-size: 13px;
+  }
 }

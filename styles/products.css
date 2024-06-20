@@ -537,50 +537,53 @@
   #products {
     /* display: grid; */
     grid-template-columns: repeat(2, 1fr);
+    /* width: 100%; */
     gap: unset;
-    padding: 0px;
-    margin: 0px 10px;
+    /* padding: 0px; */
+    /* margin: 0px 10px; */
   }
 
   #products>.product {
     width: 100%;
+    border-radius: 0px;
+    border: 1px solid white;
   }
 
   #products>.product {
+    display: flex;
+    gap: 1px;
+    padding: 5px;
     flex-direction: column;
     width: 100%;
 
   }
+  
+  #products >.product .pictures  {
+  position: relative;
+height: 180px;
+    /* border: 1px solid white; */
+  }
 
-  #products .pictures img {
-    height: 150px;
+  #products >.product .pictures img {
+   height: 100%;
     object-fit: cover;
-    border: 1px solid white;
+    /* border: 1px solid white; */
   }
 
-  .product {
-    display: flex;
-    gap: 1px;
-    padding: 5px;
-  }
 
-  .pictures>div {
-    position: relative;
-  }
 
-  .pictures>div>p {
+  #products >.product  .pictures>div>p {
     font-size: 10px;
     border: 2px solid red;
     font-size: 10px;
     width: 100%;
     position: absolute;
-    top: -156px;
-    right: 8px;
+    top: 5px;
     border: none;
     background: transparent;
     color: #fff;
   }
-}
+
 
 .info {
   display: flex;
@@ -588,25 +591,25 @@
   padding: 3px;
 }
 
+
 .info h3 {
-  font-size: 9px;
+  font-size: 12px;
 }
 
 .original-price {
-  font-size: 9px;
+  font-size: 10px;
 }
 
 .discounted-price {
-  font-size: 7px;
+  font-size: 8px;
 }
 
 .offer {
-  font-size: 7px;
+  font-size: 8px;
 }
 
 .features {
   display: grid;
-
   margin-top: unset;
 }
 
@@ -621,24 +624,18 @@
 
 .features span,
 .info>span {
-  font-size: 5px;
+  font-size: 12px;
 }
 
-.cart-btn {
-  margin-top: unset;
-  height: fit-content;
-  width: fit-content;
-  padding: 4px;
-  border-radius: 6px;
-  font-size: 8px;
+.cart-btn,.cart-btn-added {
+  width: 100%;
+
+  padding: 5px;
+  border-radius: 8px ;
+  color: #fff;
+  font-size: 14px ;
+
 }
 
-.cart-btn-added {
-  margin-top: unset;
-  height: fit-content;
-  width: auto;
-  padding: 6px;
-  border-radius: 10px;
-  font-size: 10px;
-}
+
 }
