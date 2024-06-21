@@ -9,13 +9,19 @@ const formatter = new Intl.NumberFormat("en-IN", {
 
 function appendProductsToDOM(data) {
   const container = document.querySelector(".cart");
+  const cartProdcuts = document.querySelector("#cart-products");
+
   container.innerHTML = "";
 
   if (data.length == 0) {
-    container.innerHTML = `  <img src="https://bakestudio.in/assets/images/cart/empty-cart.gif"  alt="">`;
+    cartProdcuts.innerHTML = `  <img src="https://bakestudio.in/assets/images/cart/empty-cart.gif"  alt="">
+  
+        <a href="index.html">
+        <button >Buy Some Products</button></a>
+  `;
   }
 
-  data.forEach((product,index) => {
+  data.forEach((product, index) => {
     const productContainer = document.createElement("div");
     // productContainer.setAttribute("product-id",product.id)
     productContainer.classList.add("card");
@@ -25,9 +31,15 @@ function appendProductsToDOM(data) {
       <h3>${product.name}</h3>
       <span>${formatter.format(product.price)}</span>
       <select name="Qty" id="Qty" >
-          <option value="1" ${product.quantity==1 ? "selected" : ""}>Qty-1</option>
-          <option value="2" ${product.quantity==2 ? "selected" : ""}>Qty-2</option>
-          <option value="3" ${product.quantity==3 ? "selected" : ""}>Qty-3</option>
+          <option value="1" ${
+            product.quantity == 1 ? "selected" : ""
+          }>Qty-1</option>
+          <option value="2" ${
+            product.quantity == 2 ? "selected" : ""
+          }>Qty-2</option>
+          <option value="3" ${
+            product.quantity == 3 ? "selected" : ""
+          }>Qty-3</option>
       </select>
       <button class="delete-btn">Delete</button>`;
 
@@ -43,10 +55,8 @@ function appendProductsToDOM(data) {
     const deleteBtn = productContainer.querySelector(".delete-btn");
     deleteBtn.addEventListener("click", () => {
       // addItemsToCart(product);
-      handleDelete(product,index);
+      handleDelete(product, index);
     });
-
-
   });
 }
 
@@ -82,14 +92,15 @@ let initiaCartValues = {
 function calculateTotalAmount() {
   const cartValues = cartData.reduce(function (acc, curr) {
     return {
-      totalMRP: acc.totalMRP + (curr.originalPrice *curr.quantity) ,
+      totalMRP: acc.totalMRP + curr.originalPrice * curr.quantity,
       items: acc.items + Number(curr.quantity),
-      totalAmount: acc.totalAmount + (curr.price*curr.quantity),
+      totalAmount: acc.totalAmount + curr.price * curr.quantity,
     };
   }, initiaCartValues);
 
   cartValues.discount = Math.round(
-    ((cartValues.totalMRP || 0 - cartValues.totalAmount || 0) / cartValues.totalMRP || 0) * 100
+    ((cartValues.totalMRP || 0 - cartValues.totalAmount || 0) /
+      cartValues.totalMRP || 0) * 100
   );
   document.querySelector("#total-items").innerHTML = cartValues.items;
   document.querySelector("#total-price").innerHTML = formatter.format(
@@ -112,14 +123,13 @@ function handleQty(id, val) {
     return el;
   });
   localStorage.setItem("cartData", JSON.stringify(updatedCartData));
-  calculateTotalAmount()
+  calculateTotalAmount();
 }
 
- let handleDelete = ((el,index) =>{
- 
-  cartData.splice(index,1)
-  localStorage.setItem("cartData",JSON.stringify(cartData))
+let handleDelete = (el, index) => {
+  cartData.splice(index, 1);
+  localStorage.setItem("cartData", JSON.stringify(cartData));
   appendProductsToDOM(cartData);
   calculateTotalAmount();
   document.querySelector(".product-count").innerHTML = cartData.length;
-})
+};

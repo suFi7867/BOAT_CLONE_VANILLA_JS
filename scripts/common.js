@@ -36,17 +36,18 @@ window.onclick = function (event) {
 //js for hamburger menu//
 const hamburgerMenu = document.querySelector(".hamburger > img:nth-child(1)");
 const closeButton = document.querySelector(".hamburger > img:nth-child(2)");
-const leftNavBar=document.querySelector(".left-nav")
-
+const leftNavBar = document.querySelector(".left-nav");
 
 hamburgerMenu.addEventListener("click", (e) => {
-  hamburgerMenu.style.display="none";
-  closeButton.style.display="block";
-  leftNavBar.style.display="flex"
+  hamburgerMenu.style.display = "none";
+  closeButton.style.display = "block";
+  leftNavBar.style.display = "flex";
+  leftNavBar.classList.remove("close");
 });
 
 closeButton.addEventListener("click", (e) => {
-  hamburgerMenu.style.display="block";
-  closeButton.style.display="none";
-  leftNavBar.style.display="none"
+  hamburgerMenu.style.display = "block";
+  closeButton.style.display = "none";
+  // leftNavBar.style.display = "none";
+  leftNavBar.classList.add("close");
 });
