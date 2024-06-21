@@ -37,10 +37,12 @@ window.onclick = function (event) {
 const hamburgerMenu = document.querySelector(".hamburger > img:nth-child(1)");
 const closeButton = document.querySelector(".hamburger > img:nth-child(2)");
 const leftNavBar = document.querySelector(".left-nav");
+const overlay=document.querySelector(".overlay");
 
 hamburgerMenu.addEventListener("click", (e) => {
   hamburgerMenu.style.display = "none";
   closeButton.style.display = "block";
+  overlay.style.display = "block";
   leftNavBar.style.display = "flex";
   leftNavBar.classList.remove("close");
 });
@@ -48,6 +50,25 @@ hamburgerMenu.addEventListener("click", (e) => {
 closeButton.addEventListener("click", (e) => {
   hamburgerMenu.style.display = "block";
   closeButton.style.display = "none";
+  overlay.style.display = "none";
   // leftNavBar.style.display = "none";
   leftNavBar.classList.add("close");
+});
+
+const subContainers = document.querySelectorAll(".sub-container");
+subContainers.forEach(function (el) {
+  el.addEventListener("click", () => {
+    window.location.href = "products.html";
+  });
+});
+
+document.body.addEventListener("click", (event) => {
+  // Check if the click target is not part of the leftNavBar or hamburgerMenu
+  if (!leftNavBar.contains(event.target) && event.target !== hamburgerMenu) {
+    // Close the drawer
+    hamburgerMenu.style.display = "block";
+    closeButton.style.display = "none";
+    leftNavBar.classList.add("close");
+    overlay.style.display = "none";
+  }
 });

@@ -436,6 +436,15 @@
   display: none;
 }
 
+.overlay {
+  display: none;
+  position: fixed;
+  background: #00000079;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 
 /* Smartphone */
 @media (min-width: 320px) and (max-width: 767px) {
@@ -468,6 +477,8 @@
 }
 
 
+
+
 /* tablet and mobile */
 @media (min-width: 320px) and (max-width: 1023px) {
   #nav {
@@ -490,58 +501,70 @@
     font-size: 16px;
     gap: 30px;
   }
+
   #nav .left-nav {
     /* Your existing styles */
-    animation: dropFadeIn 0.5s forwards; /* Animation name and duration */
+    animation: dropFadeIn 0.5s forwards;
+    /* Animation name and duration */
   }
+
   #nav .left-nav.close {
     opacity: 1;
     animation: slideUpFadeOut 0.5s forwards;
   }
-  
+
   @keyframes dropFadeIn {
     0% {
       top: -100%;
       opacity: 0;
     }
+
     30% {
       opacity: 0.5;
     }
+
     50% {
-      top: 50px; /* Adjust as necessary */
+      top: 50px;
+      /* Adjust as necessary */
       opacity: 0.7;
     }
+
     80% {
       opacity: 0.9;
     }
+
     100% {
-      top: 70px; /* Adjust as necessary */
+      top: 70px;
+      /* Adjust as necessary */
       opacity: 1;
     }
   }
-  
+
   @keyframes slideUpFadeOut {
     0% {
-      top: 70px; /* Adjust to match the final position of dropFadeIn */
-      
+      top: 70px;
+      /* Adjust to match the final position of dropFadeIn */
+
     }
-    20% {
-      
-    }
+
+    20% {}
+
     50% {
-      top: 50px; /* Adjust to match the mid-position of dropFadeIn */
-      
+      top: 50px;
+      /* Adjust to match the mid-position of dropFadeIn */
+
     }
-    70% {
-      
-    }
+
+    70% {}
+
     100% {
-      top: -100%; /* Adjust to hide the menu drawer completely */
-      
+      top: -100%;
+      /* Adjust to hide the menu drawer completely */
+
     }
   }
-  
-  
+
+
   /* #nav .left-nav.open {
     transform: translateX(0);  
       transition: transform 1s ease;
