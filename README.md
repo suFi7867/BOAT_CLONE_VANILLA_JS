@@ -1,7 +1,7 @@
 
-<h1 align="center">Bewakoof.com Clone</h1>
+<h1 align="center">Boat.com Clone</h1>
 
-<h3 align="center">It's a ReactJS E-commerce web application with all the major functionalities</h3>
+<h3 align="center">It's a E-commerce web application with all the major functionalities</h3>
 
 <br />
 
@@ -11,8 +11,8 @@
 <h4 align="center">Frontend:</h4>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="reactjs" />
-  <img src="https://img.shields.io/badge/Chakra%20UI-3bc7bd?style=for-the-badge&logo=chakraui&logoColor=white" alt="chakra-ui" />
+ 
+
   <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="javascript" />
   <img src="https://img.shields.io/badge/Rest_API-02303A?style=for-the-badge&logo=react-router&logoColor=white" alt="restAPI" />
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="css3" />
@@ -23,13 +23,13 @@
 <h4 align="center">Deployed On:</h4>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="vercel" />
-  <img src="https://img.shields.io/badge/vercel-430098?style=for-the-badge&logo=vercel&logoColor=white" alt="heroku" />
+  <img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="netlify" />
+
 </p>
 
 
 
-<h3 align="center"><a href="https://bewakoof-clone-sufi.vercel.app/"><strong>Want to see live preview »</strong></a></h3>
+<h3 align="center"><a href="https://boat-clone-sohail.netlify.app/"><strong>Want to see live preview »</strong></a></h3>
 
 
 
@@ -44,9 +44,8 @@
 </p>
 
 
-Bewakoof.com Clone is ReactJS e-commerce web application that allows you to buy shoes & clothes online with payment gateway integration. It has a variety of categories, just visit the product listing page and you will see all the products, apply filters as per your need and in just a few clicks you can buy any products from the website. This project is just for educational purpose.
+Boat.com Clone is e-commerce web application that allows you to buy electronic accessories online with payment gateway integration. It has a variety of categories, just visit the product listing page and you will see all the products, apply filters as per your need and in just a few clicks you can buy any products from the website. This project is just for educational purpose.
 
-<img src="https://i.ibb.co/ZHgwGBL/bloggif-634e5a001c1f6.gif" width="800px" />
 
 
 <br />
@@ -54,12 +53,11 @@ Bewakoof.com Clone is ReactJS e-commerce web application that allows you to buy 
 ## Screens 
 - Homepage / Landing Page
 - Product Listing Page with all categories
-- Product Description Page
 - Cart Management Page
 - Checkout with Address Management Page
 - Login / Logout Page
-- Order Summary Page
-- Single Product Page
+
+
 
 
 <br />
@@ -68,8 +66,6 @@ Bewakoof.com Clone is ReactJS e-commerce web application that allows you to buy 
 ## 🚀 Features
 - Login and Signup User Account
 - Product Sorting Based on Price, Rating and Name
-- My Orders Section for details of all ordered item
-- Wishlist Add and Remove Items
 - Cart Add and Remove Items 
 - Cart Update Quantities 
 - Address Management
