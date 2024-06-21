@@ -73,7 +73,7 @@ Boat.com Clone is e-commerce web application that allows you to buy electronic a
 
 <br />
 
-## Glimpses of Bewakoof-Clone 🙈 :
+## Glimpses of Boat-Clone 🙈 :
 
 
 
