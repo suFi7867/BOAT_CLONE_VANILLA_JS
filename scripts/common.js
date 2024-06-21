@@ -37,7 +37,8 @@ window.onclick = function (event) {
 const hamburgerMenu = document.querySelector(".hamburger > img:nth-child(1)");
 const closeButton = document.querySelector(".hamburger > img:nth-child(2)");
 const leftNavBar = document.querySelector(".left-nav");
-const overlay=document.querySelector(".overlay");
+const overlay = document.querySelector(".overlay");
+let checkIsMenuBar=false;
 
 hamburgerMenu.addEventListener("click", (e) => {
   hamburgerMenu.style.display = "none";
@@ -45,13 +46,14 @@ hamburgerMenu.addEventListener("click", (e) => {
   overlay.style.display = "block";
   leftNavBar.style.display = "flex";
   leftNavBar.classList.remove("close");
+  checkIsMenuBar=true
 });
 
 closeButton.addEventListener("click", (e) => {
   hamburgerMenu.style.display = "block";
   closeButton.style.display = "none";
   overlay.style.display = "none";
-  // leftNavBar.style.display = "none";
+  checkIsMenuBar=false
   leftNavBar.classList.add("close");
 });
 
@@ -64,11 +66,15 @@ subContainers.forEach(function (el) {
 
 document.body.addEventListener("click", (event) => {
   // Check if the click target is not part of the leftNavBar or hamburgerMenu
-  if (!leftNavBar.contains(event.target) && event.target !== hamburgerMenu) {
-    // Close the drawer
-    hamburgerMenu.style.display = "block";
-    closeButton.style.display = "none";
-    leftNavBar.classList.add("close");
-    overlay.style.display = "none";
+  if (window.innerWidth < 1024 && checkIsMenuBar) {
+    if (!leftNavBar.contains(event.target) && event.target !== hamburgerMenu) {
+      // Close the drawer
+      hamburgerMenu.style.display = "block";
+      closeButton.style.display = "none";
+      leftNavBar.classList.add("close");
+      overlay.style.display = "none";
+      checkIsMenuBar=false
+
+    }
   }
 });
